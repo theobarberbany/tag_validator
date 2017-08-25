@@ -34,8 +34,8 @@ def get_dups(a_list):
 
 get_dups(split)
 
-arraytemp = np.array(split, dtype=bytes)
-array = arraytemp.view('S1').reshape((arraytemp.size, -1))
+#arraytemp = np.array(split, dtype=bytes)
+#array = arraytemp.view('S1').reshape((arraytemp.size, -1))
 #print(repr(array))
 
 #transpose so it's easy to reference a col.
@@ -43,21 +43,9 @@ array = arraytemp.view('S1').reshape((arraytemp.size, -1))
 #print(repr(art))
 
 #initialise a counter dictionary entry for every tag, initialise to 0.
-counters = {}
-for tagnum in range(len(split)):
-    counters["tag{0}".format(tagnum)]=0
-#print(counters)
-#print(art[0])
-
-#Compare the first tag (Leaving this for a more bruteforce method as the cols are confusing me right now)
-#for base1 in art[0]:
-#    for base2 in art[0]:
-#        if base1 == base2:
-#            pass
-#        else:
-#            print("Base1 : {} Does not match Base2 : {}".format(base1, base2))
-
-#Compares first tag to all other tags and so on.
+#counters = {}
+#for tagnum in range(len(split)):
+#    counters["tag{0}".format(tagnum)]=0
 
 #Function to compare two tags, returns the degree to which they differ.
 def difference(tag1, tag2):
@@ -68,10 +56,17 @@ def difference(tag1, tag2):
         if tag1[char] != tag2[char]:
                 counter +=1
     return(counter)
+#Function to check if a list of tags differ by at least 3.
+def check_tags(tag_list):
+    for i in range(len(tag_list)):
+        for j in range(i+1, len(tag_list)):
+            dif = difference(tag_list[i],tag_list[j])
+            if dif < 3:
+               return("Comparing {} to {} : Insufficient difference of {} \n".format(tag_list[i],tag_list[j],dif))
 
-print("Test differences stuff")
-print(difference("CATG", "ACAG"))
-
-for i in range(len(split)):
-    for j in range(i, len(split)):
-        print(difference(split[i],split[j]))
+checked_tags = check_tags(split)
+if checked_tags is not None:
+    print("Error in provided tags")
+    print(checked_tags)
+else:
+    print("Tags ok")
