@@ -69,9 +69,9 @@ def difference(tag1, tag2):
                 counter +=1
     return(counter)
 
+print("Test differences stuff")
+print(difference("CATG", "ACAG"))
 
-
-
-
-#for tag1 in split:
-#    for tag_base in tag1:
+for i in range(len(split)):
+    for j in range(i, len(split)):
+        print(difference(split[i],split[j]))
