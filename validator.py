@@ -4,7 +4,7 @@ import numpy as np
 import argparse
 
 parser = argparse.ArgumentParser(description="Checks if  the supplied tags differ enough.")
-parser.add_argument("-f", "--file", dest='inputfile', ngargs=1,
+parser.add_argument("-f", "--file", dest='inputfile', nargs=1,
         help="pass a file containing tags to be checked")
 parser.add_argument("-d", "--database", type=str, nargs=2,
         metavar=("USER","PASSWORD"),
