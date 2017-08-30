@@ -14,7 +14,7 @@ split = read_data.split()
 def check_bases(a_list):
     for tag in a_list:
         for base in tag:
-            if (base == 'A') or (base == 'T') or (base =='C') or (base == 'G'):
+            if (base == 'A') or (base == 'T') or (base =='C') or (base == 'G') or (base == 'N'):
                 pass
             else:
                 print("Tag {} contains invalid bases : {}".format(tag, base))
