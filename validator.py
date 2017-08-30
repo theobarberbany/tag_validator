@@ -1,10 +1,11 @@
 #!/usr/bin/python
+import os
 import sys
 import numpy as np
 import argparse
 
 parser = argparse.ArgumentParser(description="Checks if  the supplied tags differ enough.")
-parser.add_argument("-f", "--file", dest='inputfile', nargs=1,
+parser.add_argument("-f", "--file", dest='inputfile', nargs=1, type=str,
         help="pass a file containing tags to be checked")
 parser.add_argument("-d", "--database", type=str, nargs=2,
         metavar=("USER","PASSWORD"),
@@ -56,7 +57,10 @@ def check_tags(tag_list):
 
 if args.inputfile is not None:
     #do some stuff when an inputfile is passed
-    with open(args.inputfile,'r') as f:
+    mydir = os.getcwd()
+    print(mydir)
+    print(args.inputfile)
+    with open(os.path.join(mydir,args.inputfile[0]),'r') as f:
         read_data = f.read()
     print("Data passed : \n")
     print(read_data)
