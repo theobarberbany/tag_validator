@@ -61,8 +61,17 @@ def check_tags(tag_list):
 
 
 #function to calculate reverse compliment of a tag
-def rev_comp(tag):
-    pass
+complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+alt_map = {'N':'0'}
+def reverse_complement(tag):
+    for k,v in alt_map.iteritems():
+        tag = tag.replace(k,v)
+    bases = list(seq)
+    bases = reversed([complement.get(base,base) for base in bases])
+    bases = ''.join(bases)
+    for k,v in alt_map.iteritems():
+        bases = bases.replace(v,k)
+    return(bases)
     #do some stuff
 #function to check if passed tags are in any of the tag groups
 #probably a good idea to take a list instead of a single tag so no need to open/close
