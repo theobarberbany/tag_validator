@@ -4,6 +4,12 @@ import sys
 import numpy as np
 import argparse
 import mysql.connector
+import collections
+import pprint
+
+pp=pprint.PrettyPrinter(indent=4)
+
+
 parser = argparse.ArgumentParser(description="Checks if  the supplied tags differ enough.")
 parser.add_argument("-f", "--file", dest='inputfile', nargs=1, type=str,
         help="pass a file containing tags to be checked")
@@ -65,13 +71,13 @@ def db_check_tag(tag):
     tag_conn = mysql.connector.connect(user=args.database[0],
             host='seqw-db',database='sequencescape_warehouse',port=3379)
     tag_cursor = tag_conn.cursor()
-    tag_query = ("SELECT DISTINCT tag_group_internal_id,tag_group_name FROM tags WHERE expected_sequence = '{}' AND tag_group_internal_id IS NOT NULL".format(tag))
+    tag_query = ("SELECT DISTINCT tag_group_internal_id,tag_group_name FROM tags WHERE expected_sequence = '{}' AND tag_group_internal_id IS NOT NULL AND is_current = True".format(tag))
     tag_cursor.execute(tag_query)
     rows = tag_cursor.fetchall()
     return(rows)
     tag_cursor.close() 
     tag_conn.close() # (Don't forget to close the db connection)
-print(db_check_tag('TACGAT'))
+
 #File Mode
 
 if args.inputfile is not None:
@@ -96,7 +102,15 @@ if args.inputfile is not None:
         print("Error in provided tags")
         print(checked_tags)
     else:
-        print("Tags ok")
+        print("Tags ok \n")
+
+
+if args.database is not None:
+    tag_dict = {}
+    for tag in range(len(split)):
+       tag_dict[split[tag]] = db_check_tag(split[tag]) ;
+
+    pp.pprint(tag_dict)
 #arraytemp = np.array(split, dtype=bytes)
 #array = arraytemp.view('S1').reshape((arraytemp.size, -1))
 #print(repr(array))
