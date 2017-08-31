@@ -3,12 +3,12 @@ import os
 import sys
 import numpy as np
 import argparse
-
+import mysql.connector
 parser = argparse.ArgumentParser(description="Checks if  the supplied tags differ enough.")
 parser.add_argument("-f", "--file", dest='inputfile', nargs=1, type=str,
         help="pass a file containing tags to be checked")
-parser.add_argument("-d", "--database", type=str, nargs=2,
-        metavar=("USER","PASSWORD"),
+parser.add_argument("-d", "--database", type=str, nargs=1,
+        metavar=("USER"),
         help="toggle database mode")
 
 args = parser.parse_args()
@@ -53,6 +53,25 @@ def check_tags(tag_list):
             if dif < 3:
                return("Comparing {} to {} : Insufficient difference of {} \n".format(tag_list[i],tag_list[j],dif))
 
+
+#function to calculate reverse compliment of a tag
+def rev_comp(tag):
+    pass
+    #do some stuff
+#function to check if passed tags are in any of the tag groups
+#probably a good idea to take a list instead of a single tag so no need to open/close
+    #multiple times
+def db_check_tag(tag):
+    tag_conn = mysql.connector.connect(user=args.database[0],
+            host='seqw-db',database='sequencescape_warehouse',port=3379)
+    tag_cursor = tag_conn.cursor()
+    tag_query = ("SELECT DISTINCT tag_group_internal_id,tag_group_name FROM tags WHERE expected_sequence = '{}' AND tag_group_internal_id IS NOT NULL".format(tag))
+    tag_cursor.execute(tag_query)
+    rows = tag_cursor.fetchall()
+    return(rows)
+    tag_cursor.close() 
+    tag_conn.close() # (Don't forget to close the db connection)
+print(db_check_tag('TACGAT'))
 #File Mode
 
 if args.inputfile is not None:
