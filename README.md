@@ -1,4 +1,3 @@
-# tag_validator
-#H1 Tag Validator
+# Tag Balidator
 
 A script to validate inputted tags.
