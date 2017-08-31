@@ -64,15 +64,16 @@ def check_tags(tag_list):
 complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
 alt_map = {'N':'0'}
 def reverse_complement(tag):
-    for k,v in alt_map.iteritems():
+    for k,v in alt_map.items():
         tag = tag.replace(k,v)
-    bases = list(seq)
+    bases = list(tag)
     bases = reversed([complement.get(base,base) for base in bases])
     bases = ''.join(bases)
-    for k,v in alt_map.iteritems():
+    for k,v in alt_map.items():
         bases = bases.replace(v,k)
     return(bases)
-    #do some stuff
+
+
 #function to check if passed tags are in any of the tag groups
 #probably a good idea to take a list instead of a single tag so no need to open/close
     #multiple times
@@ -84,7 +85,7 @@ def db_check_tag(tag):
     tag_cursor.execute(tag_query)
     rows = tag_cursor.fetchall()
     return(rows)
-    tag_cursor.close() 
+    tag_cursor.close()
     tag_conn.close() # (Don't forget to close the db connection)
 
 #File Mode
@@ -98,7 +99,7 @@ if args.inputfile is not None:
         read_data = f.read()
     print("Data passed : \n")
     print(read_data)
-    
+
     #split input file into individual tags
     split = read_data.split()
     #check the passed tags are valid combinations of ATCG
@@ -120,6 +121,15 @@ if args.database is not None:
        tag_dict[split[tag]] = db_check_tag(split[tag]) ;
 
     pp.pprint(tag_dict)
+
+    for key, value in tag_dict.items():
+        if value == []:
+            print("Tag {} not found in database, checking reverse complement: {}".format(key,reverse_complement(key)))
+            checked_revcomp = db_check_tag(reverse_complement(key))
+            if checked_revcomp == []:
+                print("Nothing found")
+            else:
+                print(checked_revcomp)
 #arraytemp = np.array(split, dtype=bytes)
 #array = arraytemp.view('S1').reshape((arraytemp.size, -1))
 #print(repr(array))
