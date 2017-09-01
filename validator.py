@@ -6,7 +6,7 @@ import argparse
 import mysql.connector
 import collections
 import pprint
-
+import pandas as pd
 pp=pprint.PrettyPrinter(indent=4)
 
 
@@ -16,6 +16,9 @@ parser.add_argument("-f", "--file", dest='inputfile', nargs=1, type=str,
 parser.add_argument("-d", "--database", type=str, nargs=1,
         metavar=("USER"),
         help="toggle database mode")
+parser.add_argument("-m", "--manifest", type=str, nargs=1,
+        metavar=("MANIFEST FILE"),
+        help="supply a manifest to check")
 
 args = parser.parse_args()
 
@@ -28,7 +31,7 @@ def check_bases(a_list):
                 pass
             else:
                 print("Tag {} contains invalid bases : {}".format(tag, base))
-                sys.exit()
+                # sys.exit()
 
 #function to check for duplicate tags
 
@@ -39,7 +42,10 @@ def get_dups(a_list):
             if a_list[i] == a_list[j]:
                 duplicates.append(a_list[i])
     if len(duplicates) > 0:
-        sys.exit("Duplicate Tag Found : {}   Quitting.".format(duplicates[0]))
+        dup_cut = list(set(duplicates))
+        for i in range(len(dup_cut)):
+            print("Duplicate Tag Found : {} ".format(dup_cut[i]))
+        print("Found {} total duplicates\n".format(len(dup_cut)))
 
 #Function to compare two tags, returns the degree to which they differ.
 def difference(tag1, tag2):
@@ -53,11 +59,14 @@ def difference(tag1, tag2):
 
 #Function to check if a list of tags differ by at least 3.
 def check_tags(tag_list):
+    bad_tags = {}
     for i in range(len(tag_list)):
         for j in range(i+1, len(tag_list)):
             dif = difference(tag_list[i],tag_list[j])
             if dif < 3:
-               return("Comparing {} to {} : Insufficient difference of {} \n".format(tag_list[i],tag_list[j],dif))
+                bad_tags[tag_list[i]] = [tag_list[j], dif]; 
+    for t,v in bad_tags.items():
+        print("Comparing {} to {} : Insufficient difference of {}".format(t,v[0],v[1]))
 
 
 #function to calculate reverse compliment of a tag
@@ -93,8 +102,6 @@ def db_check_tag(tag):
 if args.inputfile is not None:
     #do some stuff when an inputfile is passed
     mydir = os.getcwd()
-    print(mydir)
-    print(args.inputfile)
     with open(os.path.join(mydir,args.inputfile[0]),'r') as f:
         read_data = f.read()
     print("Data passed : \n")
@@ -108,13 +115,34 @@ if args.inputfile is not None:
     get_dups(split)
     #check the entire list of tags
     checked_tags = check_tags(split)
-    if checked_tags is not None:
-        print("Error in provided tags")
-        print(checked_tags)
-    else:
-        print("Tags ok \n")
+    print("Finished Processing\n")
 
+#Deal with a manifest
+if args.manifest is not None:
+    manifest = pd.read_csv(args.manifest[0], skiprows = 9, usecols=[2,3], header=None)
+    manifest.columns = ['tag1','tag2'] #rename cols to make life simple
+    print(manifest)
+    taglist1 = []
+    taglist2 = []
+    for i in range(len(manifest.loc[:,'tag1'])):
+        taglist1.append(manifest.loc[i]['tag1'])
 
+    for i in range(len(manifest.loc[:,'tag2'])):
+        taglist2.append(manifest.loc[i]['tag2'])
+
+    #check the passed tags are valid combinations of ATCG
+    check_bases(taglist1)
+    check_bases(taglist2)
+    #check tags for duplicates
+    get_dups(taglist1)
+    get_dups(taglist2)
+    #check the entire list of tags
+    checked_tags = check_tags(taglist1)
+    checked_tags = check_tags(taglist2)
+    
+    print("Fininshed Processing \n")
+
+#Check the database
 if args.database is not None:
     tag_dict = {}
     for tag in range(len(split)):
@@ -130,15 +158,3 @@ if args.database is not None:
                 print("Nothing found")
             else:
                 print(checked_revcomp)
-#arraytemp = np.array(split, dtype=bytes)
-#array = arraytemp.view('S1').reshape((arraytemp.size, -1))
-#print(repr(array))
-
-#transpose so it's easy to reference a col.
-#art = array.transpose()
-#print(repr(art))
-
-#initialise a counter dictionary entry for every tag, initialise to 0.
-#counters = {}
-#for tagnum in range(len(split)):
-#    counters["tag{0}".format(tagnum)]=0

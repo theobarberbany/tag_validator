@@ -1,0 +1,100 @@
+DNA Collections Form,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Multiplexed library tube barcode:,NT1122728W,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Study:,4873STDY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Supplier:,Sanger Centre,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+No. Tubes Sent:,184,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SANGER TUBE ID,SANGER SAMPLE ID,TAG OLIGO,TAG2 OLIGO,LIBRARY TYPE,INSERT SIZE FROM,INSERT SIZE TO,SUPPLIER SAMPLE NAME,COHORT,VOLUME (ul),CONC. (ng/ul),GENDER,COUNTRY OF ORIGIN,GEOGRAPHICAL REGION,ETHNICITY,DNA SOURCE,DATE OF SAMPLE COLLECTION (MM/YY or YYYY only),DATE OF DNA EXTRACTION (MM/YY or YYYY only),IS SAMPLE A CONTROL?,IS RE-SUBMITTED SAMPLE?,DNA EXTRACTION METHOD,SAMPLE PURIFIED?,PURIFICATION METHOD,CONCENTRATION DETERMINED BY,DNA STORAGE CONDITIONS,MOTHER (optional),FATHER (optional),SIBLING (optional),GC CONTENT,PUBLIC NAME,TAXON ID,COMMON NAME,SAMPLE DESCRIPTION,STRAIN,SAMPLE VISIBILITY,SAMPLE TYPE,SAMPLE ACCESSION NUMBER (optional),DONOR ID (required for EGA),PHENOTYPE (required for EGA)
+NT1122544Q,4873STDY7038756,CGTACTAG,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0001,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0001,Endometrioid stromal sarcoma
+NT1122545R,4873STDY7038757,AGGCAGAA,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0002,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0002,Endometrioid stromal sarcoma
+NT1122546S,4873STDY7038758,TCCTGAGC,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0003,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0003,Endometrioid stromal sarcoma
+NT1122547T,4873STDY7038759,GGACTCCT,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0004,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0004,Endometrioid stromal sarcoma
+NT1122548U,4873STDY7038760,TAGGCATG,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0005,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0005,Endometrioid stromal sarcoma
+NT1122549V,4873STDY7038761,CTCTCTAC,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0006,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0006,Endometrioid stromal sarcoma
+NT1122550O,4873STDY7038762,CGAGGCTG,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0007,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0007,Endometrioid stromal sarcoma
+NT1122551P,4873STDY7038763,AAGAGGCA,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0008,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0008,Endometrioid stromal sarcoma
+NT1122552Q,4873STDY7038764,GTAGAGGA,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0009,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0009,Endometrioid stromal sarcoma
+NT1122553R,4873STDY7038765,GCTCATGA,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0010,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0010,Endometrioid stromal sarcoma
+NT1122554S,4873STDY7038766,ATCTCAGG,TCGACTAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0011,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0011,Endometrioid stromal sarcoma
+NT1122555T,4873STDY7038767,TAAGGCGA,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0012,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0012,Endometrioid stromal sarcoma
+NT1122556U,4873STDY7038768,CGTACTAG,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0013,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0013,Endometrioid stromal sarcoma
+NT1122557V,4873STDY7038769,AGGCAGAA,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0014,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0014,Endometrioid stromal sarcoma
+NT1122558W,4873STDY7038770,TCCTGAGC,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0015,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0015,Endometrioid stromal sarcoma
+NT1122559A,4873STDY7038771,GGACTCCT,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0016,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0016,Endometrioid stromal sarcoma
+NT1122560Q,4873STDY7038772,TAGGCATG,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0017,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0017,Endometrioid stromal sarcoma
+NT1122561R,4873STDY7038773,CTCTCTAC,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0018,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0018,Endometrioid stromal sarcoma
+NT1122562S,4873STDY7038774,CGAGGCTG,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0019,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0019,Endometrioid stromal sarcoma
+NT1122563T,4873STDY7038775,AAGAGGCA,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0020,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0020,Endometrioid stromal sarcoma
+NT1122564U,4873STDY7038776,GTAGAGGA,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0021,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0021,Endometrioid stromal sarcoma
+NT1122565V,4873STDY7038777,GCTCATGA,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0022,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0022,Endometrioid stromal sarcoma
+NT1122566W,4873STDY7038778,ATCTCAGG,TTCTAGCT,Nextera dual index qPCR only,100,1000,ESS-1_sc0023,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0023,Endometrioid stromal sarcoma
+NT1122567A,4873STDY7038779,TAAGGCGA,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0024,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0024,Endometrioid stromal sarcoma
+NT1122568B,4873STDY7038780,CGTACTAG,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0025,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0025,Endometrioid stromal sarcoma
+NT1122569C,4873STDY7038781,AGGCAGAA,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0026,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0026,Endometrioid stromal sarcoma
+NT1122570S,4873STDY7038782,TCCTGAGC,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0027,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0027,Endometrioid stromal sarcoma
+NT1122571T,4873STDY7038783,GGACTCCT,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0028,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0028,Endometrioid stromal sarcoma
+NT1122572U,4873STDY7038784,TAGGCATG,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0029,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0029,Endometrioid stromal sarcoma
+NT1122573V,4873STDY7038785,CTCTCTAC,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0030,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0030,Endometrioid stromal sarcoma
+NT1122574W,4873STDY7038786,CGAGGCTG,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0031,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0031,Endometrioid stromal sarcoma
+NT1122575A,4873STDY7038787,AAGAGGCA,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0032,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0032,Endometrioid stromal sarcoma
+NT1122576B,4873STDY7038788,GTAGAGGA,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0033,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0033,Endometrioid stromal sarcoma
+NT1122577C,4873STDY7038789,GCTCATGA,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0034,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0034,Endometrioid stromal sarcoma
+NT1122578D,4873STDY7038790,ATCTCAGG,CCTAGAGT,Nextera dual index qPCR only,100,1000,ESS-1_sc0035,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0035,Endometrioid stromal sarcoma
+NT1122579E,4873STDY7038791,TAAGGCGA,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0036,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0036,Endometrioid stromal sarcoma
+NT1122580U,4873STDY7038792,CGTACTAG,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0037,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0037,Endometrioid stromal sarcoma
+NT1122581V,4873STDY7038793,AGGCAGAA,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0038,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0038,Endometrioid stromal sarcoma
+NT1122582W,4873STDY7038794,TCCTGAGC,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0039,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0039,Endometrioid stromal sarcoma
+NT1122583A,4873STDY7038795,GGACTCCT,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0040,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0040,Endometrioid stromal sarcoma
+NT1122584B,4873STDY7038796,TAGGCATG,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0041,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0041,Endometrioid stromal sarcoma
+NT1122585C,4873STDY7038797,CTCTCTAC,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0042,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0042,Endometrioid stromal sarcoma
+NT1122586D,4873STDY7038798,CGAGGCTG,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0043,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0043,Endometrioid stromal sarcoma
+NT1122587E,4873STDY7038799,AAGAGGCA,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0044,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0044,Endometrioid stromal sarcoma
+NT1122588F,4873STDY7038800,GTAGAGGA,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0045,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0045,Endometrioid stromal sarcoma
+NT1122589G,4873STDY7038801,GCTCATGA,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0046,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0046,Endometrioid stromal sarcoma
+NT1122590W,4873STDY7038802,ATCTCAGG,GCGTAAGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0047,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0047,Endometrioid stromal sarcoma
+NT1122591A,4873STDY7038803,TAAGGCGA,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0048,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0048,Endometrioid stromal sarcoma
+NT1122592B,4873STDY7038804,CGTACTAG,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0049,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0049,Endometrioid stromal sarcoma
+NT1122593C,4873STDY7038805,AGGCAGAA,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0050,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0050,Endometrioid stromal sarcoma
+NT1122594D,4873STDY7038806,TCCTGAGC,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0051,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0051,Endometrioid stromal sarcoma
+NT1122595E,4873STDY7038807,GGACTCCT,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0052,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0052,Endometrioid stromal sarcoma
+NT1122596F,4873STDY7038808,TAGGCATG,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0053,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0053,Endometrioid stromal sarcoma
+NT1122597G,4873STDY7038809,CTCTCTAC,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0054,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0054,Endometrioid stromal sarcoma
+NT1122598H,4873STDY7038810,CGAGGCTG,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0055,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0055,Endometrioid stromal sarcoma
+NT1122599I,4873STDY7038811,AAGAGGCA,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0056,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0056,Endometrioid stromal sarcoma
+NT1122600H,4873STDY7038812,GTAGAGGA,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0057,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0057,Endometrioid stromal sarcoma
+NT1122601I,4873STDY7038813,GCTCATGA,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0058,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0058,Endometrioid stromal sarcoma
+NT1122602J,4873STDY7038814,ATCTCAGG,CTATTAAG,Nextera dual index qPCR only,100,1000,ESS-1_sc0059,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0059,Endometrioid stromal sarcoma
+NT1122603K,4873STDY7038815,TAAGGCGA,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0060,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0060,Endometrioid stromal sarcoma
+NT1122604L,4873STDY7038816,CGTACTAG,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0061,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0061,Endometrioid stromal sarcoma
+NT1122605M,4873STDY7038817,AGGCAGAA,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0062,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0062,Endometrioid stromal sarcoma
+NT1122606N,4873STDY7038818,TCCTGAGC,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0063,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0063,Endometrioid stromal sarcoma
+NT1122607O,4873STDY7038819,GGACTCCT,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0064,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0064,Endometrioid stromal sarcoma
+NT1122608P,4873STDY7038820,TAGGCATG,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0065,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0065,Endometrioid stromal sarcoma
+NT1122609Q,4873STDY7038821,CTCTCTAC,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0066,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0066,Endometrioid stromal sarcoma
+NT1122610J,4873STDY7038822,CGAGGCTG,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0067,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0067,Endometrioid stromal sarcoma
+NT1122611K,4873STDY7038823,AAGAGGCA,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0068,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0068,Endometrioid stromal sarcoma
+NT1122612L,4873STDY7038824,GTAGAGGA,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0069,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0069,Endometrioid stromal sarcoma
+NT1122613M,4873STDY7038825,GCTCATGA,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0070,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0070,Endometrioid stromal sarcoma
+NT1122614N,4873STDY7038826,ATCTCAGG,AAGGCTAT,Nextera dual index qPCR only,100,1000,ESS-1_sc0071,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0071,Endometrioid stromal sarcoma
+NT1122615O,4873STDY7038827,TAAGGCGA,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0072,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0072,Endometrioid stromal sarcoma
+NT1122616P,4873STDY7038828,CGTACTAG,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0073,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0073,Endometrioid stromal sarcoma
+NT1122617Q,4873STDY7038829,AGGCAGAA,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0074,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0074,Endometrioid stromal sarcoma
+NT1122618R,4873STDY7038830,TCCTGAGC,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0075,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0075,Endometrioid stromal sarcoma
+NT1122619S,4873STDY7038831,GGACTCCT,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0076,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0076,Endometrioid stromal sarcoma
+NT1122620L,4873STDY7038832,TAGGCATG,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0077,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0077,Endometrioid stromal sarcoma
+NT1122621M,4873STDY7038833,CTCTCTAC,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0078,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0078,Endometrioid stromal sarcoma
+NT1122622N,4873STDY7038834,CGAGGCTG,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0079,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0079,Endometrioid stromal sarcoma
+NT1122623O,4873STDY7038835,AAGAGGCA,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0080,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0080,Endometrioid stromal sarcoma
+NT1122624P,4873STDY7038836,GTAGAGGA,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0081,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0081,Endometrioid stromal sarcoma
+NT1122625Q,4873STDY7038837,GCTCATGA,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0082,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0082,Endometrioid stromal sarcoma
+NT1122626R,4873STDY7038838,ATCTCAGG,GAGCCTTA,Nextera dual index qPCR only,100,1000,ESS-1_sc0083,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0083,Endometrioid stromal sarcoma
+NT1122627S,4873STDY7038839,TAAGGCGA,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0084,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0084,Endometrioid stromal sarcoma
+NT1122628T,4873STDY7038840,CGTACTAG,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0085,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0085,Endometrioid stromal sarcoma
+NT1122629U,4873STDY7038841,AGGCAGAA,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0086,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0086,Endometrioid stromal sarcoma
+NT1122630N,4873STDY7038842,TCCTGAGC,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0087,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0087,Endometrioid stromal sarcoma
+NT1122631O,4873STDY7038843,GGACTCCT,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0088,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0088,Endometrioid stromal sarcoma
+NT1122632P,4873STDY7038844,TAGGCATG,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0089,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0089,Endometrioid stromal sarcoma
+NT1122633Q,4873STDY7038845,CTCTCTAC,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0090,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0090,Endometrioid stromal sarcoma
+NT1122634R,4873STDY7038846,CGAGGCTG,TTATGCGA,Nextera dual index qPCR only,100,1000,ESS-1_sc0091,Tumour,50,50,Female,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,ESS-1_sc0091,Endometrioid stromal sarcoma
