@@ -134,13 +134,13 @@ if args.inputfile is not None:
     print(read_data)
 
     #split input file into individual tags
-    split = read_data.split()
+    a_file = read_data.a_file()
     #check the passed tags are valid combinations of ATCG
-    check_bases(split)
+    check_bases(a_file)
     #check tags for duplicates
-    get_dups(split)
+    get_dups(a_file)
     #check the entire list of tags
-    checked_tags = check_tags(split)
+    checked_tags = check_tags(a_file)
     print("Finished Processing\n")
 
 #Deal with a manifest
@@ -171,7 +171,7 @@ if args.manifest is not None:
 #Check the database
 if args.database is not None:
     if args.inputfile is not None:
-        db_check_list(split)
+        db_check_list(a_file)
     elif args.manifest is not None:
         db_check_list(taglist1)
         db_check_list(taglist2)
