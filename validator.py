@@ -106,7 +106,7 @@ def db_check_list(a_list):
     tag_dict = {}
     for tag in range(len(a_list)):
        tag_dict[a_list[tag]] = db_check_tag(a_list[tag]) ;
-
+    print("Database tag breakdown: \n")
     pp.pprint(tag_dict)
 
     for key, value in tag_dict.items():
@@ -130,24 +130,23 @@ if args.inputfile is not None:
     mydir = os.getcwd()
     with open(os.path.join(mydir,args.inputfile[0]),'r') as f:
         read_data = f.read()
-    print("Data passed : \n")
-    print(read_data)
+    # print("Data passed : \n")
+    # print(read_data)
 
     #split input file into individual tags
-    a_file = read_data.a_file()
+    a_file = read_data.split()
     #check the passed tags are valid combinations of ATCG
     check_bases(a_file)
     #check tags for duplicates
     get_dups(a_file)
     #check the entire list of tags
     checked_tags = check_tags(a_file)
-    print("Finished Processing\n")
 
 #Deal with a manifest
 if args.manifest is not None:
     manifest = pd.read_csv(args.manifest[0], skiprows = 9, usecols=[2,3], header=None)
     manifest.columns = ['tag1','tag2'] #rename cols to make life simple
-    print(manifest)
+    # print(manifest)
     taglist1 = []
     taglist2 = []
     for i in range(len(manifest.loc[:,'tag1'])):
@@ -166,8 +165,6 @@ if args.manifest is not None:
     checked_tags = check_tags(taglist1)
     checked_tags = check_tags(taglist2)
     
-    print("Fininshed Processing \n")
-
 #Check the database
 if args.database is not None:
     if args.inputfile is not None:
@@ -175,3 +172,4 @@ if args.database is not None:
     elif args.manifest is not None:
         db_check_list(taglist1)
         db_check_list(taglist2)
+
