@@ -22,6 +22,11 @@ parser.add_argument("-m", "--manifest", type=str, nargs=1,
 
 args = parser.parse_args()
 
+##########################
+##########################
+###Function Definitions###
+##########################
+##########################
 
 #function to check each tag is a valid combination of ATCG
 def check_bases(a_list):
@@ -97,8 +102,29 @@ def db_check_tag(tag):
     tag_cursor.close()
     tag_conn.close() # (Don't forget to close the db connection)
 
-#File Mode
+def db_check_list(a_list):
+    tag_dict = {}
+    for tag in range(len(a_list)):
+       tag_dict[a_list[tag]] = db_check_tag(a_list[tag]) ;
 
+    pp.pprint(tag_dict)
+
+    for key, value in tag_dict.items():
+        if value == []:
+            print("Tag {} not found in database, checking reverse complement: {}".format(key,reverse_complement(key)))
+            checked_revcomp = db_check_tag(reverse_complement(key))
+            if checked_revcomp == []:
+                print("Nothing found")
+            else:
+                print(checked_revcomp)
+
+##########################
+##########################
+######Parse Arguments#####
+##########################
+##########################
+
+#File Mode
 if args.inputfile is not None:
     #do some stuff when an inputfile is passed
     mydir = os.getcwd()
@@ -144,17 +170,8 @@ if args.manifest is not None:
 
 #Check the database
 if args.database is not None:
-    tag_dict = {}
-    for tag in range(len(split)):
-       tag_dict[split[tag]] = db_check_tag(split[tag]) ;
-
-    pp.pprint(tag_dict)
-
-    for key, value in tag_dict.items():
-        if value == []:
-            print("Tag {} not found in database, checking reverse complement: {}".format(key,reverse_complement(key)))
-            checked_revcomp = db_check_tag(reverse_complement(key))
-            if checked_revcomp == []:
-                print("Nothing found")
-            else:
-                print(checked_revcomp)
+    if args.inputfile is not None:
+        db_check_list(split)
+    elif args.manifest is not None:
+        db_check_list(taglist1)
+        db_check_list(taglist2)
