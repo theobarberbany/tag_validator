@@ -146,24 +146,27 @@ if args.inputfile is not None:
 if args.manifest is not None:
     manifest = pd.read_csv(args.manifest[0], skiprows = 9, usecols=[2,3], header=None)
     manifest.columns = ['tag1','tag2'] #rename cols to make life simple
+    manifest['long_tag'] = manifest['tag1'].map(str) + manifest['tag2'] # concatenate the two tags
     # print(manifest)
     taglist1 = []
     taglist2 = []
+    long_tags = []
     for i in range(len(manifest.loc[:,'tag1'])):
         taglist1.append(manifest.loc[i]['tag1'])
 
     for i in range(len(manifest.loc[:,'tag2'])):
         taglist2.append(manifest.loc[i]['tag2'])
+    manifest['long_tag'] = manifest['tag1'].map(str) + manifest['tag2']
+
+    for i in range(len(manifest.loc[:,'long_tag'])):
+        long_tags.append(manifest.loc[i]['long_tag'])
 
     #check the passed tags are valid combinations of ATCG
-    check_bases(taglist1)
-    check_bases(taglist2)
+    check_bases(long_tags)
     #check tags for duplicates
-    get_dups(taglist1)
-    get_dups(taglist2)
+    get_dups(long_tags)
     #check the entire list of tags
-    checked_tags = check_tags(taglist1)
-    checked_tags = check_tags(taglist2)
+    checked_tags = check_tags(long_tags)
     
 #Check the database
 if args.database is not None:
@@ -172,4 +175,5 @@ if args.database is not None:
     elif args.manifest is not None:
         db_check_list(taglist1)
         db_check_list(taglist2)
+        db_check_list(long_tags)
 
