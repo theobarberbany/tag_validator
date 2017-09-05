@@ -237,12 +237,15 @@ if args.database is not None:
         print("Occurences of tags in database: \n")
         db_check_list(a_file)
     elif args.manifest is not None:
-    #check if there are one or two cols
-        print("Occurences of tag1 in database: \n")
-        db_check_list(taglist1)
-        print("Occurences of tag2 in database: \n")
-        db_check_list(taglist2)
-        print("Occurences of compound tags in database: \n")
-        db_check_list(long_tags)
+        #check if there are one or two cols
+        if manifest.isnull().values.any():
+            db_check_list(taglist)
+        else:
+            print("Occurences of tag1 in database: \n")
+            db_check_list(taglist1)
+            print("Occurences of tag2 in database: \n")
+            db_check_list(taglist2)
+            print("Occurences of compound tags in database: \n")
+            db_check_list(long_tags)
 elif args.database==None and args.inputfile==None and args.manifest==None:
     print("No arguments passed, try running with -h")

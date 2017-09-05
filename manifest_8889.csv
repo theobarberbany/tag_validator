@@ -1,0 +1,15 @@
+DNA Collections Form,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Study:,4402STDY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Supplier:,Sanger Centre,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+No. Tubes Sent:,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SANGER TUBE ID,SANGER SAMPLE ID,TAG OLIGO,TAG2 OLIGO,LIBRARY TYPE,INSERT SIZE FROM,INSERT SIZE TO,SUPPLIER SAMPLE NAME,COHORT,VOLUME (ul),CONC. (ng/ul),GENDER,COUNTRY OF ORIGIN,GEOGRAPHICAL REGION,ETHNICITY,DNA SOURCE,DATE OF SAMPLE COLLECTION (MM/YY or YYYY only),DATE OF DNA EXTRACTION (MM/YY or YYYY only),IS SAMPLE A CONTROL?,IS RE-SUBMITTED SAMPLE?,DNA EXTRACTION METHOD,SAMPLE PURIFIED?,PURIFICATION METHOD,CONCENTRATION DETERMINED BY,DNA STORAGE CONDITIONS,MOTHER (optional),FATHER (optional),SIBLING (optional),GC CONTENT,PUBLIC NAME,TAXON ID,COMMON NAME,SAMPLE DESCRIPTION,STRAIN,SAMPLE VISIBILITY,SAMPLE TYPE,SAMPLE ACCESSION NUMBER (optional),DONOR ID (required for EGA),PHENOTYPE (required for EGA)
+NT1131113V,4402STDY7055015,TAAGCGTT,,qPCR only,180,200,A1A_C09_screenA,Tumour,35,2,Unknown,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,A1A_C09_screenA,Cell Line
+NT1131114W,4402STDY7055016,TCCGTCTT,,qPCR only,180,200,A1A_C09_screenB,Tumour,35,2,Unknown,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,A1A_C09_screenB,Cell Line
+NT1131115A,4402STDY7055017,TGTACCTT,,qPCR only,180,200,A1A_C09_screenC,Tumour,35,2,Unknown,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,A1A_C09_screenC,Cell Line
+NT1131116B,4402STDY7055018,TTCTGTGT,,qPCR only,180,200,A1B_C03_screenA,Tumour,35,2,Unknown,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,A1B_C03_screenA,Cell Line
+NT1131117C,4402STDY7055019,TCTGCTGT,,qPCR only,180,200,A1B_C03_screenB,Tumour,35,2,Unknown,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,A1B_C03_screenB,Cell Line
+NT1131118D,4402STDY7055020,TTGGAGGT,,qPCR only,180,200,A1B_C03_screenC,Tumour,35,2,Unknown,,,,,,,,,,,,,,,,,,,9606,Homo sapiens,,,,,,A1B_C03_screenC,Cell Line
