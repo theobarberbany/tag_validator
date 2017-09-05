@@ -69,7 +69,7 @@ def check_tags(tag_list):
         for j in range(i+1, len(tag_list)):
             dif = difference(tag_list[i],tag_list[j])
             if dif < 3:
-                bad_tags[tag_list[i]] = [tag_list[j], dif]; 
+                bad_tags[tag_list[i]] = [tag_list[j], dif];
     for t,v in bad_tags.items():
         print("Comparing {} to {} : Insufficient difference of {}".format(t,v[0],v[1]))
 
@@ -118,6 +118,25 @@ def db_check_list(a_list):
             else:
                 print(checked_revcomp)
 
+#function to check if groups of tags are suceptible to cross talk issues
+def check_crosstalk_col(dataframe, colno):
+    cols = []
+    for i in range(len(dataframe)):
+       cols.append(dataframe[0][i][colno])
+    return(cols)
+
+def check_crosstalk(taglist):
+    df = pd.DataFrame(taglist)
+    nocols = len(taglist[0]) # assume all tags are same length
+    listcols = []
+    for i in range(nocols):
+        listcols.append(check_crosstalk_col(df, i))
+    
+
+
+mytags = ['CAGATCTG','CATCAAGT','CTGAGCCA']
+
+print(check_crosstalk(mytags))
 ##########################
 ##########################
 ######Parse Arguments#####
@@ -167,7 +186,7 @@ if args.manifest is not None:
     get_dups(long_tags)
     #check the entire list of tags
     checked_tags = check_tags(long_tags)
-    
+
 #Check the database
 if args.database is not None:
     if args.inputfile is not None:
@@ -176,4 +195,3 @@ if args.database is not None:
         db_check_list(taglist1)
         db_check_list(taglist2)
         db_check_list(long_tags)
-
