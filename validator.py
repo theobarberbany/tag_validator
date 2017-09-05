@@ -118,8 +118,8 @@ def db_check_list(a_list):
             else:
                 print(checked_revcomp)
 
-#function to check if groups of tags are suceptible to cross talk issues
-def check_crosstalk_col(dataframe, colno):
+#check if groups of tags are suceptible to cross talk / complexity issues
+def check_crosstalk_col(dataframe, colno): #checks a single col
     cols = []
     for i in range(len(dataframe)):
        cols.append(dataframe[0][i][colno])
@@ -180,7 +180,7 @@ if args.inputfile is not None:
     get_dups(a_file)
     #check the entire list of tags
     checked_tags = check_tags(a_file)
-
+    #check for complexity issues
     check_crosstalk(a_file)
 
 #Deal with a manifest
