@@ -1,6 +1,28 @@
-Output of:  python3 validator.py -m manifest_8801.csv -d warehouse_ro > output.txt
+For Tag 1 : 
 
-Database tag breakdown:
+ Col 0 has 24.18% A, 25.27% T, 26.37% C, 24.18% G
+ Col 1 has 24.18% A, 24.18% T, 16.48% C, 35.16% G
+ Col 2 has 32.97% A, 16.48% T, 25.27% C, 25.27% G
+ Col 3 has 16.48% A, 25.27% T, 25.27% C, 32.97% G
+ Col 4 has 24.18% A, 8.79% T, 34.07% C, 32.97% G
+ Col 5 has 25.27% A, 25.27% T, 25.27% C, 24.18% G
+ Col 6 has 26.37% A, 17.58% T, 16.48% C, 39.56% G
+ Col 7 has 39.56% A, 8.79% T, 17.58% C, 34.07% G
+
+
+For Tag 2 : 
+
+ Col 0 has 13.19% A, 34.07% T, 26.37% C, 26.37% G
+ Col 1 has 26.37% A, 35.16% T, 38.46% C, 0.00% G
+ Col 2 has 21.98% A, 13.19% T, 13.19% C, 51.65% G
+ Col 3 has 25.27% A, 48.35% T, 13.19% C, 13.19% G
+ Col 4 has 26.37% A, 13.19% T, 38.46% C, 21.98% G
+ Col 5 has 39.56% A, 38.46% T, 8.79% C, 13.19% G
+ Col 6 has 38.46% A, 13.19% T, 13.19% C, 35.16% G
+ Col 7 has 35.16% A, 39.56% T, 0.00% C, 25.27% G
+
+
+Occurences of tag1 in database: 
 
 {   'AAGAGGCA': [   (23, 'Nextera v2 i7 tags'),
                     (59, 'Ad2_tag_set  (8 mer)'),
@@ -81,7 +103,9 @@ Database tag breakdown:
                     (104, 'Custom for ATAC-seq - 8mer'),
                     (141, 'Custom Nextera Single_8mer'),
                     (142, 'Magic Tag Group')]}
-Database tag breakdown:
+
+
+Occurences of tag2 in database: 
 
 {   'AAGGCTAT': [   (96, 'SCG_NEXTERA384_i5'),
                     (93, 'Dual Index Tag2 sequences'),
@@ -101,7 +125,9 @@ Database tag breakdown:
                     (93, 'Dual Index Tag2 sequences'),
                     (142, 'Magic Tag Group')],
     'TTCTAGCT': [(96, 'SCG_NEXTERA384_i5'), (142, 'Magic Tag Group')]}
-Database tag breakdown:
+
+
+Occurences of compound tags in database: 
 
 {   'AAGAGGCAAAGGCTAT': [   (   88,
                                 'Illumina Nextera XT tags - 16mers - 384 plex'),
@@ -643,3 +669,5 @@ Database tag breakdown:
                             (   99,
                                 'Illumina Nextera XT tags - 16mers - 384 plex '
                                 'ALTERNATIVE PLATE ARRAY')]}
+
+

@@ -106,8 +106,8 @@ def db_check_list(a_list):
     tag_dict = {}
     for tag in range(len(a_list)):
        tag_dict[a_list[tag]] = db_check_tag(a_list[tag]) ;
-    print("Database tag breakdown: \n")
     pp.pprint(tag_dict)
+    print("\n")
 
     for key, value in tag_dict.items():
         if value == []:
@@ -153,7 +153,8 @@ def check_crosstalk(taglist):
         print(" {} has {:.2f}% A, {:.2f}% T, {:.2f}% C, {:.2f}% G".format(col, 
             ((lst[0]/sum(lst))*100), ((lst[1]/sum(lst))*100), ((lst[2]/sum(lst))*100),
             ((lst[3]/sum(lst))*100) )) 
-    print(proportions)
+    print("\n")
+    # print(proportions) #numerical proportions
     
 
 
@@ -225,20 +226,23 @@ if args.manifest is not None:
         #check the entire list of tags
         checked_tags = check_tags(long_tags)
         #check for complexity issues
-        print("For Tag 1 : ")
+        print("For Tag 1 : \n")
         check_crosstalk(taglist1)
-        print("For Tag 2 : ")
+        print("For Tag 2 : \n")
         check_crosstalk(taglist2)
 
 #Check the database
 if args.database is not None:
     if args.inputfile is not None:
+        print("Occurences of tags in database: \n")
         db_check_list(a_file)
     elif args.manifest is not None:
     #check if there are one or two cols
-
+        print("Occurences of tag1 in database: \n")
         db_check_list(taglist1)
+        print("Occurences of tag2 in database: \n")
         db_check_list(taglist2)
+        print("Occurences of compound tags in database: \n")
         db_check_list(long_tags)
 elif args.database==None and args.inputfile==None and args.manifest==None:
     print("No arguments passed, try running with -h")
