@@ -224,14 +224,19 @@ if args.manifest is not None:
         get_dups(long_tags)
         #check the entire list of tags
         checked_tags = check_tags(long_tags)
-#check for complexity issues
-        check_crosstalk(long_tags)
+        #check for complexity issues
+        print("For Tag 1 : ")
+        check_crosstalk(taglist1)
+        print("For Tag 2 : ")
+        check_crosstalk(taglist2)
 
 #Check the database
 if args.database is not None:
     if args.inputfile is not None:
         db_check_list(a_file)
     elif args.manifest is not None:
+    #check if there are one or two cols
+
         db_check_list(taglist1)
         db_check_list(taglist2)
         db_check_list(long_tags)
