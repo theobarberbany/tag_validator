@@ -149,7 +149,10 @@ def check_crosstalk(taglist):
                 proportions["Col {}".format(i)][3] += 1 
             else:
                 pass
-
+    for col, lst in proportions.items():
+        print(" {} has {:.2f}% A, {:.2f}% T, {:.2f}% C, {:.2f}% G".format(col, 
+            ((lst[0]/sum(lst))*100), ((lst[1]/sum(lst))*100), ((lst[2]/sum(lst))*100),
+            ((lst[3]/sum(lst))*100) )) 
     print(proportions)
     
 
