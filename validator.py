@@ -189,25 +189,43 @@ if args.manifest is not None:
     manifest.columns = ['tag1','tag2'] #rename cols to make life simple
     manifest['long_tag'] = manifest['tag1'].map(str) + manifest['tag2'] # concatenate the two tags
     # print(manifest)
-    taglist1 = []
-    taglist2 = []
-    long_tags = []
-    for i in range(len(manifest.loc[:,'tag1'])):
-        taglist1.append(manifest.loc[i]['tag1'])
+    #deal with manifests with only 1 col of tags
+    if manifest.isnull().values.any(): 
+        taglist = []
+        for i in range(len(manifest.loc[:,'tag1'])):
+            taglist.append(manifest.loc[i]['tag1'])
+        
+        #check the passed tags are valid combinations of ATCG
+        check_bases(taglist)
+        #check tags for duplicates
+        get_dups(taglist)
+        #check the entire list of tags
+        checked_tags = check_tags(taglist)
+#check for complexity issues
+        check_crosstalk(taglist)
+    #manifests with two tag cols
+    else: 
+        taglist1 = []
+        taglist2 = []
+        long_tags = []
+        for i in range(len(manifest.loc[:,'tag1'])):
+            taglist1.append(manifest.loc[i]['tag1'])
 
-    for i in range(len(manifest.loc[:,'tag2'])):
-        taglist2.append(manifest.loc[i]['tag2'])
-    manifest['long_tag'] = manifest['tag1'].map(str) + manifest['tag2']
+        for i in range(len(manifest.loc[:,'tag2'])):
+            taglist2.append(manifest.loc[i]['tag2'])
+        manifest['long_tag'] = manifest['tag1'].map(str) + manifest['tag2']
 
-    for i in range(len(manifest.loc[:,'long_tag'])):
-        long_tags.append(manifest.loc[i]['long_tag'])
+        for i in range(len(manifest.loc[:,'long_tag'])):
+            long_tags.append(manifest.loc[i]['long_tag'])
 
-    #check the passed tags are valid combinations of ATCG
-    check_bases(long_tags)
-    #check tags for duplicates
-    get_dups(long_tags)
-    #check the entire list of tags
-    checked_tags = check_tags(long_tags)
+        #check the passed tags are valid combinations of ATCG
+        check_bases(long_tags)
+        #check tags for duplicates
+        get_dups(long_tags)
+        #check the entire list of tags
+        checked_tags = check_tags(long_tags)
+#check for complexity issues
+        check_crosstalk(long_tags)
 
 #Check the database
 if args.database is not None:
