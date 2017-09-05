@@ -129,14 +129,31 @@ def check_crosstalk(taglist):
     df = pd.DataFrame(taglist)
     nocols = len(taglist[0]) # assume all tags are same length
     listcols = []
+    proportions = {}
+    
     for i in range(nocols):
         listcols.append(check_crosstalk_col(df, i))
+
+    for i in range(len(listcols)):
+        proportions["Col {}".format(i)] = [0,0,0,0] # A,T,C,G
+
+    for i in range(len(listcols)):
+        for j in range(len(listcols[i])): #asssuming again all tags are same length
+            if listcols[i][j] == "A":
+                proportions["Col {}".format(i)][0] += 1 
+            elif listcols[i][j] == "T":
+                proportions["Col {}".format(i)][1] += 1 
+            elif listcols[i][j] == "C":
+                proportions["Col {}".format(i)][2] += 1 
+            elif listcols[i][j] == "G":
+                proportions["Col {}".format(i)][3] += 1 
+            else:
+                pass
+
+    print(proportions)
     
 
 
-mytags = ['CAGATCTG','CATCAAGT','CTGAGCCA']
-
-print(check_crosstalk(mytags))
 ##########################
 ##########################
 ######Parse Arguments#####
@@ -160,6 +177,8 @@ if args.inputfile is not None:
     get_dups(a_file)
     #check the entire list of tags
     checked_tags = check_tags(a_file)
+
+    check_crosstalk(a_file)
 
 #Deal with a manifest
 if args.manifest is not None:
