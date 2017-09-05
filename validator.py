@@ -217,3 +217,5 @@ if args.database is not None:
         db_check_list(taglist1)
         db_check_list(taglist2)
         db_check_list(long_tags)
+elif args.database==None and args.inputfile==None and args.manifest==None:
+    print("No arguments passed, try running with -h")
