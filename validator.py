@@ -7,7 +7,7 @@ import mysql.connector
 import collections
 import pprint
 import pandas as pd
-pp=pprint.PrettyPrinter(indent=4)
+pp=pprint.PrettyPrinter(indent=4) #pretty printing lib for dictionaries
 
 
 parser = argparse.ArgumentParser(description="Checks if  the supplied tags differ enough.")
@@ -19,6 +19,8 @@ parser.add_argument("-d", "--database", type=str, nargs=1,
 parser.add_argument("-m", "--manifest", type=str, nargs=1,
         metavar=("MANIFEST FILE"),
         help="supply a manifest to check")
+parser.add_argument("-v", "--verbose", action="store_true",
+        help="Increace output verbosity")
 
 args = parser.parse_args()
 
@@ -106,8 +108,10 @@ def db_check_list(a_list):
     tag_dict = {}
     for tag in range(len(a_list)):
        tag_dict[a_list[tag]] = db_check_tag(a_list[tag]) ;
-    pp.pprint(tag_dict)
-    print("\n")
+    
+    if args.verbose:
+        pp.pprint(tag_dict)
+        print("\n")
 
     for key, value in tag_dict.items():
         if value == []:
@@ -154,7 +158,8 @@ def check_crosstalk(taglist):
             ((lst[0]/sum(lst))*100), ((lst[1]/sum(lst))*100), ((lst[2]/sum(lst))*100),
             ((lst[3]/sum(lst))*100) )) 
     print("\n")
-    # print(proportions) #numerical proportions
+    if args.verbose:
+        print(proportions) #numerical proportions
     
 
 
@@ -170,8 +175,10 @@ if args.inputfile is not None:
     mydir = os.getcwd()
     with open(os.path.join(mydir,args.inputfile[0]),'r') as f:
         read_data = f.read()
-    # print("Data passed : \n")
-    # print(read_data)
+    
+    if args.verbose:
+        print("Data passed : \n")
+        print(read_data)
 
     #split input file into individual tags
     a_file = read_data.split()
