@@ -15,3 +15,10 @@ optional arguments:
                         supply a manifest to check
 
 database readonly user : warehouse_ro
+
+#To Do :
+ 
+ Serialise data from database, pull local copy at program initialisation - only one
+ connection needed instead of many. 
+
+ Port to Js web app:
