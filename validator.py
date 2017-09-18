@@ -114,9 +114,10 @@ def db_check_list(a_list):
             print("Tag {} not found in database, checking reverse complement: {}".format(key,reverse_complement(key)))
             checked_revcomp = db_check_tag(reverse_complement(key))
             if checked_revcomp == []:
-                print("Nothing found")
+                print("Nothing found \n")
             else:
                 print(checked_revcomp)
+                print("\n")
 
     #return group breakdowns
     #extract values independently of keys
@@ -249,9 +250,9 @@ if args.manifest is not None:
         #check the entire list of tags
         checked_tags = check_tags(long_tags)
         #check for complexity issues
-        print("For Tag 1 : \n")
+        print("Composition for Tag 1 : \n")
         check_crosstalk(taglist1)
-        print("For Tag 2 : \n")
+        print("Composition for Tag 2 : \n")
         check_crosstalk(taglist2)
 
 #Check the database

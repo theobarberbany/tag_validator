@@ -1,0 +1,43 @@
+Comparing ACAAGGTA to ACAACGCA : Insufficient difference of 2
+Comparing ACAATTCA to ACAACGCA : Insufficient difference of 2
+Comparing ACCACGAA to ACAACGCA : Insufficient difference of 2
+ Col 0 has 25.19% A, 24.94% T, 24.94% C, 24.94% G
+ Col 1 has 24.94% A, 24.94% T, 25.19% C, 24.94% G
+ Col 2 has 25.19% A, 24.94% T, 24.94% C, 24.94% G
+ Col 3 has 25.19% A, 24.94% T, 24.94% C, 24.94% G
+ Col 4 has 24.94% A, 24.94% T, 25.19% C, 24.94% G
+ Col 5 has 24.94% A, 24.94% T, 24.94% C, 25.19% G
+ Col 6 has 24.94% A, 24.94% T, 25.19% C, 24.94% G
+ Col 7 has 25.19% A, 24.94% T, 24.94% C, 24.94% G
+
+
+Occurences of tags in database: 
+
+Tag ACAACGCA not found in database, checking reverse complement: TGCGTTGT
+Nothing found 
+
+117 Chromium Genome 96,  Matches : 384
+5 RInV Transposon indexing primers - 8 mer tags,  Matches : 1
+103 calculus_tag_group_46 - 67 tags,  Matches : 1
+60 Nextflex96_8mers,  Matches : 1
+159 PF_adapters_UDI_96_D_i5,  Matches : 3
+154 PF_adapters_UDI_96_B_i7,  Matches : 1
+130 Nextera i5 tags for 1536,  Matches : 1
+142 Magic Tag Group,  Matches : 1
+127 i5 Nextera test tags,  Matches : 1
+47 SureSelect RNA-Seq 48 tags set - 8 mer tags,  Matches : 1
+155 PF_adapters_UDI_96_B_i5,  Matches : 1
+146 Nextera 1536 i5 screen tags v3,  Matches : 1
+149 Nextera 1536 v3 i5s,  Matches : 1
+73 Moleculo384,  Matches : 4
+140 Nextera i5 for 1536v2,  Matches : 1
+105 Meyer Kircher Custom 8bp Barcodes,  Matches : 1
+6 Sanger_168tags - 10 mer tags,  Matches : 1
+157 PF_adapters_UDI_96_C_i5,  Matches : 2
+139 Nextera i5 tags for 1536 new,  Matches : 1
+153 PF_adapters_UDI_96_A_i5,  Matches : 1
+92 NEXTflex-96 barcoded adapters,  Matches : 1
+147 Nextera 1536 i7 screen tags v3,  Matches : 2
+158 PF_adapters_UDI_96_D_i7,  Matches : 2
+
+
