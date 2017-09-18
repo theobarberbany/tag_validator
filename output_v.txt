@@ -1,0 +1,705 @@
+For Tag 1 : 
+
+ Col 0 has 24.18% A, 25.27% T, 26.37% C, 24.18% G
+ Col 1 has 24.18% A, 24.18% T, 16.48% C, 35.16% G
+ Col 2 has 32.97% A, 16.48% T, 25.27% C, 25.27% G
+ Col 3 has 16.48% A, 25.27% T, 25.27% C, 32.97% G
+ Col 4 has 24.18% A, 8.79% T, 34.07% C, 32.97% G
+ Col 5 has 25.27% A, 25.27% T, 25.27% C, 24.18% G
+ Col 6 has 26.37% A, 17.58% T, 16.48% C, 39.56% G
+ Col 7 has 39.56% A, 8.79% T, 17.58% C, 34.07% G
+
+
+{'Col 0': [22, 23, 24, 22], 'Col 1': [22, 22, 15, 32], 'Col 2': [30, 15, 23, 23], 'Col 3': [15, 23, 23, 30], 'Col 4': [22, 8, 31, 30], 'Col 5': [23, 23, 23, 22], 'Col 6': [24, 16, 15, 36], 'Col 7': [36, 8, 16, 31]}
+For Tag 2 : 
+
+ Col 0 has 13.19% A, 34.07% T, 26.37% C, 26.37% G
+ Col 1 has 26.37% A, 35.16% T, 38.46% C, 0.00% G
+ Col 2 has 21.98% A, 13.19% T, 13.19% C, 51.65% G
+ Col 3 has 25.27% A, 48.35% T, 13.19% C, 13.19% G
+ Col 4 has 26.37% A, 13.19% T, 38.46% C, 21.98% G
+ Col 5 has 39.56% A, 38.46% T, 8.79% C, 13.19% G
+ Col 6 has 38.46% A, 13.19% T, 13.19% C, 35.16% G
+ Col 7 has 35.16% A, 39.56% T, 0.00% C, 25.27% G
+
+
+{'Col 0': [12, 31, 24, 24], 'Col 1': [24, 32, 35, 0], 'Col 2': [20, 12, 12, 47], 'Col 3': [23, 44, 12, 12], 'Col 4': [24, 12, 35, 20], 'Col 5': [36, 35, 8, 12], 'Col 6': [35, 12, 12, 32], 'Col 7': [32, 36, 0, 23]}
+Occurences of tag1 in database: 
+
+97 SCG_NEXTERAXT96v2_i7,  Matches : 10
+104 Custom for ATAC-seq - 8mer,  Matches : 7
+59 Ad2_tag_set  (8 mer),  Matches : 10
+141 Custom Nextera Single_8mer,  Matches : 10
+142 Magic Tag Group,  Matches : 12
+23 Nextera v2 i7 tags,  Matches : 10
+95 SCG_NEXTERA384_i7,  Matches : 12
+71 Nextera Single Index - 8mers,  Matches : 10
+
+
+verbose output: 
+
+{   'AAGAGGCA': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'AGGCAGAA': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (104, 'Custom for ATAC-seq - 8mer'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'ATCTCAGG': [(95, 'SCG_NEXTERA384_i7'), (142, 'Magic Tag Group')],
+    'CGAGGCTG': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'CGTACTAG': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (104, 'Custom for ATAC-seq - 8mer'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'CTCTCTAC': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (104, 'Custom for ATAC-seq - 8mer'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'GCTCATGA': [(95, 'SCG_NEXTERA384_i7'), (142, 'Magic Tag Group')],
+    'GGACTCCT': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (104, 'Custom for ATAC-seq - 8mer'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'GTAGAGGA': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'TAAGGCGA': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (104, 'Custom for ATAC-seq - 8mer'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'TAGGCATG': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (104, 'Custom for ATAC-seq - 8mer'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')],
+    'TCCTGAGC': [   (23, 'Nextera v2 i7 tags'),
+                    (59, 'Ad2_tag_set  (8 mer)'),
+                    (71, 'Nextera Single Index - 8mers'),
+                    (95, 'SCG_NEXTERA384_i7'),
+                    (97, 'SCG_NEXTERAXT96v2_i7'),
+                    (104, 'Custom for ATAC-seq - 8mer'),
+                    (141, 'Custom Nextera Single_8mer'),
+                    (142, 'Magic Tag Group')]}
+
+
+Occurences of tag2 in database: 
+
+96 SCG_NEXTERA384_i5,  Matches : 8
+93 Dual Index Tag2 sequences,  Matches : 4
+142 Magic Tag Group,  Matches : 8
+98 SCG_NEXTERAXT96v2_i5,  Matches : 1
+
+
+verbose output: 
+
+{   'AAGGCTAT': [   (96, 'SCG_NEXTERA384_i5'),
+                    (93, 'Dual Index Tag2 sequences'),
+                    (142, 'Magic Tag Group')],
+    'CCTAGAGT': [(96, 'SCG_NEXTERA384_i5'), (142, 'Magic Tag Group')],
+    'CTATTAAG': [   (96, 'SCG_NEXTERA384_i5'),
+                    (93, 'Dual Index Tag2 sequences'),
+                    (142, 'Magic Tag Group')],
+    'GAGCCTTA': [   (96, 'SCG_NEXTERA384_i5'),
+                    (93, 'Dual Index Tag2 sequences'),
+                    (142, 'Magic Tag Group')],
+    'GCGTAAGA': [   (96, 'SCG_NEXTERA384_i5'),
+                    (98, 'SCG_NEXTERAXT96v2_i5'),
+                    (142, 'Magic Tag Group')],
+    'TCGACTAG': [(96, 'SCG_NEXTERA384_i5'), (142, 'Magic Tag Group')],
+    'TTATGCGA': [   (96, 'SCG_NEXTERA384_i5'),
+                    (93, 'Dual Index Tag2 sequences'),
+                    (142, 'Magic Tag Group')],
+    'TTCTAGCT': [(96, 'SCG_NEXTERA384_i5'), (142, 'Magic Tag Group')]}
+
+
+Occurences of compound tags in database: 
+
+88 Illumina Nextera XT tags - 16mers - 384 plex,  Matches : 91
+86 Nextera DUAL v3 - 96 tags - 16mer (alternative plate array) USE THIS ONE,  Matches : 5
+85 Nextera v3 - 96 tags - 16mer (ALTERNATIVE PLATE ARRAY),  Matches : 10
+87 Nextera DUAL v3 - 96 tags - 16mer (ALTERNATIVE PLATE ARRAY) updated,  Matches : 10
+99 Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY,  Matches : 91
+78 Nextera v3 - 96 tags - 16mer,  Matches : 10
+
+
+verbose output: 
+
+{   'AAGAGGCAAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AAGAGGCACCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AAGAGGCACTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AAGAGGCAGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AAGAGGCAGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AAGAGGCATCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AAGAGGCATTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAAAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAACCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAACTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAAGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAAGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   86,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(alternative plate array) USE THIS ONE'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAATCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAATTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'AGGCAGAATTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'ATCTCAGGAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'ATCTCAGGCCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'ATCTCAGGCTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'ATCTCAGGGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'ATCTCAGGGCGTAAGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'ATCTCAGGTCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'ATCTCAGGTTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGCCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGCTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGTCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGTTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGAGGCTGTTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGCCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGCTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   86,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(alternative plate array) USE THIS ONE'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGTCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGTTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CGTACTAGTTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACCCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACCTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACTCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACTTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'CTCTCTACTTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GCTCATGAAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GCTCATGACCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GCTCATGACTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GCTCATGAGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GCTCATGAGCGTAAGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GCTCATGATCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GCTCATGATTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTCCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTCTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   86,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(alternative plate array) USE THIS ONE'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTTCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTTTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GGACTCCTTTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GTAGAGGAAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GTAGAGGACCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GTAGAGGACTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GTAGAGGAGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GTAGAGGAGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GTAGAGGATCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'GTAGAGGATTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAAGGCGAAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAAGGCGACCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAAGGCGACTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAAGGCGAGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAAGGCGAGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   86,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(alternative plate array) USE THIS ONE'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAAGGCGATTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAAGGCGATTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGCCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGCTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGTCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGTTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TAGGCATGTTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCAAGGCTAT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCCCTAGAGT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCCTATTAAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCGAGCCTTA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCGCGTAAGA': [   (78, 'Nextera v3 - 96 tags - 16mer'),
+                            (   85,
+                                'Nextera v3 - 96 tags - 16mer (ALTERNATIVE '
+                                'PLATE ARRAY)'),
+                            (   86,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(alternative plate array) USE THIS ONE'),
+                            (   87,
+                                'Nextera DUAL v3 - 96 tags - 16mer '
+                                '(ALTERNATIVE PLATE ARRAY) updated'),
+                            (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCTCGACTAG': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCTTATGCGA': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')],
+    'TCCTGAGCTTCTAGCT': [   (   88,
+                                'Illumina Nextera XT tags - 16mers - 384 plex'),
+                            (   99,
+                                'Illumina Nextera XT tags - 16mers - 384 plex '
+                                'ALTERNATIVE PLATE ARRAY')]}
+
+

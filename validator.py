@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/USR/bin/python
 import os
 import sys
 import numpy as np
@@ -108,10 +108,6 @@ def db_check_list(a_list):
     tag_dict = {}
     for tag in range(len(a_list)):
        tag_dict[a_list[tag]] = db_check_tag(a_list[tag]) ;
-    
-    if args.verbose:
-        pp.pprint(tag_dict)
-        print("\n")
 
     for key, value in tag_dict.items():
         if value == []:
@@ -121,6 +117,26 @@ def db_check_list(a_list):
                 print("Nothing found")
             else:
                 print(checked_revcomp)
+
+    #return group breakdowns
+    #extract values independently of keys
+    values = []
+    for key, value in tag_dict.items():
+        values.append(value)
+    #flatten list 
+    flat_list = [item for sublist in values for item in sublist]
+    distinct = list(set(flat_list))
+    for i in range(len(distinct)):
+        print("{} {},  Matches : {}".format(distinct[i][0], distinct[i][1], flat_list.count(distinct[i])))
+    print("\n")
+
+    # print("DEBUG HERE")
+    # pp.pprint(flat_list)
+    
+    if args.verbose:
+        print("verbose output: \n")
+        pp.pprint(tag_dict)
+        print("\n")
 
 #check if groups of tags are suceptible to cross talk / complexity issues
 def check_crosstalk_col(dataframe, colno): #checks a single col
