@@ -1,0 +1,309 @@
+ Col 0 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 1 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 2 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 3 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 4 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 5 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 6 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 7 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 8 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 9 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 10 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 11 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 12 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 13 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+ Col 14 has 25.00% A, 25.00% T, 25.00% C, 25.00% G
+
+
+Occurences of tags in database: 
+
+Tag TACTAGGTAAGCAGC not found in database, checking reverse complement: GCTGCTTACCTAGTA
+Nothing found 
+
+Tag ACGTACGTAAGCAGC not found in database, checking reverse complement: GCTGCTTACGTACGT
+Nothing found 
+
+Tag CGCGATATAAGCAGC not found in database, checking reverse complement: GCTGCTTATATCGCG
+Nothing found 
+
+Tag CTATCGTGAAGCAGC not found in database, checking reverse complement: GCTGCTTCACGATAG
+Nothing found 
+
+Tag GCGATACGAAGCAGC not found in database, checking reverse complement: GCTGCTTCGTATCGC
+Nothing found 
+
+Tag AGTCGCAGAAGCAGC not found in database, checking reverse complement: GCTGCTTCTGCGACT
+Nothing found 
+
+Tag GTTACAGCAAGCAGC not found in database, checking reverse complement: GCTGCTTGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCAAGCAGC not found in database, checking reverse complement: GCTGCTTGGACGTTA
+Nothing found 
+
+Tag CTACGACCAAGCAGC not found in database, checking reverse complement: GCTGCTTGGTCGTAG
+Nothing found 
+
+Tag GAGACTTAAAGCAGC not found in database, checking reverse complement: GCTGCTTTAAGTCTC
+Nothing found 
+
+Tag ACTGTGTAAAGCAGC not found in database, checking reverse complement: GCTGCTTTACACAGT
+Nothing found 
+
+Tag TGCGTCAAAAGCAGC not found in database, checking reverse complement: GCTGCTTTTGACGCA
+Nothing found 
+
+Tag TACTAGGTACGCGTG not found in database, checking reverse complement: CACGCGTACCTAGTA
+Nothing found 
+
+Tag ACGTACGTACGCGTG not found in database, checking reverse complement: CACGCGTACGTACGT
+Nothing found 
+
+Tag CGCGATATACGCGTG not found in database, checking reverse complement: CACGCGTATATCGCG
+Nothing found 
+
+Tag CTATCGTGACGCGTG not found in database, checking reverse complement: CACGCGTCACGATAG
+Nothing found 
+
+Tag GCGATACGACGCGTG not found in database, checking reverse complement: CACGCGTCGTATCGC
+Nothing found 
+
+Tag AGTCGCAGACGCGTG not found in database, checking reverse complement: CACGCGTCTGCGACT
+Nothing found 
+
+Tag GTTACAGCACGCGTG not found in database, checking reverse complement: CACGCGTGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCACGCGTG not found in database, checking reverse complement: CACGCGTGGACGTTA
+Nothing found 
+
+Tag CTACGACCACGCGTG not found in database, checking reverse complement: CACGCGTGGTCGTAG
+Nothing found 
+
+Tag GAGACTTAACGCGTG not found in database, checking reverse complement: CACGCGTTAAGTCTC
+Nothing found 
+
+Tag ACTGTGTAACGCGTG not found in database, checking reverse complement: CACGCGTTACACAGT
+Nothing found 
+
+Tag TGCGTCAAACGCGTG not found in database, checking reverse complement: CACGCGTTTGACGCA
+Nothing found 
+
+Tag TACTAGGTCGATCTA not found in database, checking reverse complement: TAGATCGACCTAGTA
+Nothing found 
+
+Tag ACGTACGTCGATCTA not found in database, checking reverse complement: TAGATCGACGTACGT
+Nothing found 
+
+Tag CGCGATATCGATCTA not found in database, checking reverse complement: TAGATCGATATCGCG
+Nothing found 
+
+Tag CTATCGTGCGATCTA not found in database, checking reverse complement: TAGATCGCACGATAG
+Nothing found 
+
+Tag GCGATACGCGATCTA not found in database, checking reverse complement: TAGATCGCGTATCGC
+Nothing found 
+
+Tag AGTCGCAGCGATCTA not found in database, checking reverse complement: TAGATCGCTGCGACT
+Nothing found 
+
+Tag GTTACAGCCGATCTA not found in database, checking reverse complement: TAGATCGGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCCGATCTA not found in database, checking reverse complement: TAGATCGGGACGTTA
+Nothing found 
+
+Tag CTACGACCCGATCTA not found in database, checking reverse complement: TAGATCGGGTCGTAG
+Nothing found 
+
+Tag GAGACTTACGATCTA not found in database, checking reverse complement: TAGATCGTAAGTCTC
+Nothing found 
+
+Tag ACTGTGTACGATCTA not found in database, checking reverse complement: TAGATCGTACACAGT
+Nothing found 
+
+Tag TGCGTCAACGATCTA not found in database, checking reverse complement: TAGATCGTTGACGCA
+Nothing found 
+
+Tag TACTAGGTTGCGTCA not found in database, checking reverse complement: TGACGCAACCTAGTA
+Nothing found 
+
+Tag ACGTACGTTGCGTCA not found in database, checking reverse complement: TGACGCAACGTACGT
+Nothing found 
+
+Tag CGCGATATTGCGTCA not found in database, checking reverse complement: TGACGCAATATCGCG
+Nothing found 
+
+Tag CTATCGTGTGCGTCA not found in database, checking reverse complement: TGACGCACACGATAG
+Nothing found 
+
+Tag GCGATACGTGCGTCA not found in database, checking reverse complement: TGACGCACGTATCGC
+Nothing found 
+
+Tag AGTCGCAGTGCGTCA not found in database, checking reverse complement: TGACGCACTGCGACT
+Nothing found 
+
+Tag GTTACAGCTGCGTCA not found in database, checking reverse complement: TGACGCAGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCTGCGTCA not found in database, checking reverse complement: TGACGCAGGACGTTA
+Nothing found 
+
+Tag CTACGACCTGCGTCA not found in database, checking reverse complement: TGACGCAGGTCGTAG
+Nothing found 
+
+Tag GAGACTTATGCGTCA not found in database, checking reverse complement: TGACGCATAAGTCTC
+Nothing found 
+
+Tag ACTGTGTATGCGTCA not found in database, checking reverse complement: TGACGCATACACAGT
+Nothing found 
+
+Tag TGCGTCAATGCGTCA not found in database, checking reverse complement: TGACGCATTGACGCA
+Nothing found 
+
+Tag TACTAGGTGTCTAGT not found in database, checking reverse complement: ACTAGACACCTAGTA
+Nothing found 
+
+Tag ACGTACGTGTCTAGT not found in database, checking reverse complement: ACTAGACACGTACGT
+Nothing found 
+
+Tag CGCGATATGTCTAGT not found in database, checking reverse complement: ACTAGACATATCGCG
+Nothing found 
+
+Tag CTATCGTGGTCTAGT not found in database, checking reverse complement: ACTAGACCACGATAG
+Nothing found 
+
+Tag GCGATACGGTCTAGT not found in database, checking reverse complement: ACTAGACCGTATCGC
+Nothing found 
+
+Tag AGTCGCAGGTCTAGT not found in database, checking reverse complement: ACTAGACCTGCGACT
+Nothing found 
+
+Tag GTTACAGCGTCTAGT not found in database, checking reverse complement: ACTAGACGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCGTCTAGT not found in database, checking reverse complement: ACTAGACGGACGTTA
+Nothing found 
+
+Tag CTACGACCGTCTAGT not found in database, checking reverse complement: ACTAGACGGTCGTAG
+Nothing found 
+
+Tag GAGACTTAGTCTAGT not found in database, checking reverse complement: ACTAGACTAAGTCTC
+Nothing found 
+
+Tag ACTGTGTAGTCTAGT not found in database, checking reverse complement: ACTAGACTACACAGT
+Nothing found 
+
+Tag TGCGTCAAGTCTAGT not found in database, checking reverse complement: ACTAGACTTGACGCA
+Nothing found 
+
+Tag TACTAGGTCTAGTAT not found in database, checking reverse complement: ATACTAGACCTAGTA
+Nothing found 
+
+Tag ACGTACGTCTAGTAT not found in database, checking reverse complement: ATACTAGACGTACGT
+Nothing found 
+
+Tag CGCGATATCTAGTAT not found in database, checking reverse complement: ATACTAGATATCGCG
+Nothing found 
+
+Tag CTATCGTGCTAGTAT not found in database, checking reverse complement: ATACTAGCACGATAG
+Nothing found 
+
+Tag GCGATACGCTAGTAT not found in database, checking reverse complement: ATACTAGCGTATCGC
+Nothing found 
+
+Tag AGTCGCAGCTAGTAT not found in database, checking reverse complement: ATACTAGCTGCGACT
+Nothing found 
+
+Tag GTTACAGCCTAGTAT not found in database, checking reverse complement: ATACTAGGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCCTAGTAT not found in database, checking reverse complement: ATACTAGGGACGTTA
+Nothing found 
+
+Tag CTACGACCCTAGTAT not found in database, checking reverse complement: ATACTAGGGTCGTAG
+Nothing found 
+
+Tag GAGACTTACTAGTAT not found in database, checking reverse complement: ATACTAGTAAGTCTC
+Nothing found 
+
+Tag ACTGTGTACTAGTAT not found in database, checking reverse complement: ATACTAGTACACAGT
+Nothing found 
+
+Tag TGCGTCAACTAGTAT not found in database, checking reverse complement: ATACTAGTTGACGCA
+Nothing found 
+
+Tag TACTAGGTGATAGCG not found in database, checking reverse complement: CGCTATCACCTAGTA
+Nothing found 
+
+Tag ACGTACGTGATAGCG not found in database, checking reverse complement: CGCTATCACGTACGT
+Nothing found 
+
+Tag CGCGATATGATAGCG not found in database, checking reverse complement: CGCTATCATATCGCG
+Nothing found 
+
+Tag CTATCGTGGATAGCG not found in database, checking reverse complement: CGCTATCCACGATAG
+Nothing found 
+
+Tag GCGATACGGATAGCG not found in database, checking reverse complement: CGCTATCCGTATCGC
+Nothing found 
+
+Tag AGTCGCAGGATAGCG not found in database, checking reverse complement: CGCTATCCTGCGACT
+Nothing found 
+
+Tag GTTACAGCGATAGCG not found in database, checking reverse complement: CGCTATCGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCGATAGCG not found in database, checking reverse complement: CGCTATCGGACGTTA
+Nothing found 
+
+Tag CTACGACCGATAGCG not found in database, checking reverse complement: CGCTATCGGTCGTAG
+Nothing found 
+
+Tag GAGACTTAGATAGCG not found in database, checking reverse complement: CGCTATCTAAGTCTC
+Nothing found 
+
+Tag ACTGTGTAGATAGCG not found in database, checking reverse complement: CGCTATCTACACAGT
+Nothing found 
+
+Tag TGCGTCAAGATAGCG not found in database, checking reverse complement: CGCTATCTTGACGCA
+Nothing found 
+
+Tag TACTAGGTTCTACAC not found in database, checking reverse complement: GTGTAGAACCTAGTA
+Nothing found 
+
+Tag ACGTACGTTCTACAC not found in database, checking reverse complement: GTGTAGAACGTACGT
+Nothing found 
+
+Tag CGCGATATTCTACAC not found in database, checking reverse complement: GTGTAGAATATCGCG
+Nothing found 
+
+Tag CTATCGTGTCTACAC not found in database, checking reverse complement: GTGTAGACACGATAG
+Nothing found 
+
+Tag GCGATACGTCTACAC not found in database, checking reverse complement: GTGTAGACGTATCGC
+Nothing found 
+
+Tag AGTCGCAGTCTACAC not found in database, checking reverse complement: GTGTAGACTGCGACT
+Nothing found 
+
+Tag GTTACAGCTCTACAC not found in database, checking reverse complement: GTGTAGAGCTGTAAC
+Nothing found 
+
+Tag TAACGTCCTCTACAC not found in database, checking reverse complement: GTGTAGAGGACGTTA
+Nothing found 
+
+Tag CTACGACCTCTACAC not found in database, checking reverse complement: GTGTAGAGGTCGTAG
+Nothing found 
+
+Tag GAGACTTATCTACAC not found in database, checking reverse complement: GTGTAGATAAGTCTC
+Nothing found 
+
+Tag ACTGTGTATCTACAC not found in database, checking reverse complement: GTGTAGATACACAGT
+Nothing found 
+
+Tag TGCGTCAATCTACAC not found in database, checking reverse complement: GTGTAGATTGACGCA
+Nothing found 
+
+
+
