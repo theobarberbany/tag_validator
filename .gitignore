@@ -102,3 +102,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+._requirements.txt
+manifests/._manifest_8801.csv
+manifests/._manifest_9201.csv
