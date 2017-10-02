@@ -7,34 +7,37 @@ import mysql.connector
 import collections
 import pprint
 import pandas as pd
-pp=pprint.PrettyPrinter(indent=4) #pretty printing lib for dictionaries
-
-
+import time
+import json 
+pp = pprint.PrettyPrinter(indent=4) #pretty printing lib for dictionaries
+###############################
+##Add Arguments to be parsed###
+###############################
 parser = argparse.ArgumentParser(description="Checks if  the supplied tags differ enough.")
 parser.add_argument("-f", "--file", dest='inputfile', nargs=1, type=str,
-        help="pass a file containing tags to be checked")
+                    help="pass a file containing tags to be checked")
 parser.add_argument("-d", "--database", type=str, nargs=1,
-        metavar=("USER"),
-        help="toggle database mode")
+                    metavar=("USER"),
+                    help="toggle database mode")
 parser.add_argument("-m", "--manifest", type=str, nargs=1,
-        metavar=("MANIFEST FILE"),
-        help="supply a manifest to check")
+                    metavar=("MANIFEST FILE"),
+                    help="supply a manifest to check")
 parser.add_argument("-v", "--verbose", action="store_true",
-        help="Increace output verbosity")
+                    help="Increace output verbosity")
 
 args = parser.parse_args()
 
-##########################
+
 ##########################
 ###Function Definitions###
 ##########################
-##########################
+#Basic Functionality
 
 #function to check each tag is a valid combination of ATCG
 def check_bases(a_list):
     for tag in a_list:
         for base in tag:
-            if (base == 'A') or (base == 'T') or (base =='C') or (base == 'G') or (base == 'N'):
+            if (base == 'A') or (base == 'T') or (base == 'C') or (base == 'G') or (base == 'N'):
                 pass
             else:
                 print("Tag {} contains invalid bases : {}".format(tag, base))
@@ -61,48 +64,110 @@ def difference(tag1, tag2):
     counter = 0
     for char in range(len(tag1)):
         if tag1[char] != tag2[char]:
-                counter +=1
-    return(counter)
+            counter += 1
+    return counter
 
 #Function to check if a list of tags differ by at least 3.
 def check_tags(tag_list):
     bad_tags = {}
     for i in range(len(tag_list)):
         for j in range(i+1, len(tag_list)):
-            dif = difference(tag_list[i],tag_list[j])
+            dif = difference(tag_list[i], tag_list[j])
             if dif < 3:
-                bad_tags[tag_list[i]] = [tag_list[j], dif];
-    for t,v in bad_tags.items():
-        print("Comparing {} to {} : Insufficient difference of {}".format(t,v[0],v[1]))
+                bad_tags[tag_list[i]] = [tag_list[j], dif]
+    for t, v in bad_tags.items():
+        print("Comparing {} to {} : Insufficient difference of {}".format(t, v[0], v[1]))
 
 
 #function to calculate reverse compliment of a tag
-complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
-alt_map = {'N':'0'}
 def reverse_complement(tag):
-    for k,v in alt_map.items():
-        tag = tag.replace(k,v)
+    complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+    alt_map = {'N':'0'}
+    for k, v in alt_map.items():
+        tag = tag.replace(k, v)
     bases = list(tag)
-    bases = reversed([complement.get(base,base) for base in bases])
+    bases = reversed([complement.get(base, base) for base in bases])
     bases = ''.join(bases)
-    for k,v in alt_map.items():
-        bases = bases.replace(v,k)
-    return(bases)
+    for k, v in alt_map.items():
+        bases = bases.replace(v, k)
+    return bases
 
+#check if groups of tags are suceptible to cross talk / complexity issues
+def check_crosstalk_col(dataframe, colno): #checks a single col
+    cols = []
+    for i in range(len(dataframe)):
+        cols.append(dataframe[0][i][colno])
+    return cols
 
-#function to check if passed tags are in any of the tag groups
-#probably a good idea to take a list instead of a single tag so no need to open/close
-    #multiple times
-def db_check_tag(tag):
-    tag_conn = mysql.connector.connect(user=args.database[0],
-            host='seqw-db',database='sequencescape_warehouse',port=3379)
+def check_crosstalk(taglist):
+    df = pd.DataFrame(taglist)
+    nocols = len(taglist[0]) # assume all tags are same length
+    listcols = []
+    proportions = {}
+    for i in range(nocols):
+        listcols.append(check_crosstalk_col(df, i))
+
+    for i in range(len(listcols)):
+        proportions["Col {}".format(i)] = [0, 0, 0, 0] # A,T,C,G
+
+    for i in range(len(listcols)):
+        for j in range(len(listcols[i])): #asssuming again all tags are same length
+            if listcols[i][j] == "A":
+                proportions["Col {}".format(i)][0] += 1 
+            elif listcols[i][j] == "T":
+                proportions["Col {}".format(i)][1] += 1 
+            elif listcols[i][j] == "C":
+                proportions["Col {}".format(i)][2] += 1 
+            elif listcols[i][j] == "G":
+                proportions["Col {}".format(i)][3] += 1 
+            else:
+                pass
+    for col, lst in proportions.items():
+        print(" {} has {:.2f}% A, {:.2f}% T, {:.2f}% C, {:.2f}% G".format(col, 
+            ((lst[0]/sum(lst))*100), ((lst[1]/sum(lst))*100), ((lst[2]/sum(lst))*100),
+            ((lst[3]/sum(lst))*100) )) 
+    print("\n")
+    if args.verbose:
+        print(proportions) #numerical proportions
+
+#Database functionality
+
+def db_build_cache():
+    tag_dict = {}
+    tag_conn = mysql.connector.connect(user='warehouse_ro',
+                                       host='seqw-db', database='sequencescape_warehouse', port=3379)
     tag_cursor = tag_conn.cursor()
-    tag_query = ("SELECT DISTINCT tag_group_internal_id,tag_group_name FROM tags WHERE expected_sequence = '{}' AND tag_group_internal_id IS NOT NULL AND is_current = True".format(tag))
+    tag_query = ("""
+                SELECT DISTINCT expected_sequence 
+                FROM tags 
+                WHERE tag_group_internal_id IS NOT NULL
+                AND expected_sequence IS NOT NULL
+                AND is_current = True
+                AND NOT expected_sequence = ""
+                """)
     tag_cursor.execute(tag_query)
     rows = tag_cursor.fetchall()
-    return(rows)
+    all_tags = [row[0] for row in rows]
     tag_cursor.close()
+
+    for tag in range(len(all_tags)):
+        tag_dict[all_tags[tag]] = db_check_tag(all_tags[tag], tag_conn)
+
     tag_conn.close() # (Don't forget to close the db connection)
+    return tag_dict
+
+#function to check if passed tags are in any of the tag groups
+#note that now the single tag check must have a db connection already open
+def db_check_tag(tag, tag_conn):
+    tag_cursor = tag_conn.cursor()
+    tag_query = ("""SELECT DISTINCT tag_group_internal_id,tag_group_name
+                    FROM tags WHERE expected_sequence = '{}'
+                    AND tag_group_internal_id IS NOT NULL
+                    AND is_current = True""".format(tag))
+    tag_cursor.execute(tag_query)
+    rows = tag_cursor.fetchall()
+    return rows
+    tag_cursor.close()
 
 def db_check_list(a_list):
     tag_dict = {}
@@ -139,53 +204,39 @@ def db_check_list(a_list):
         pp.pprint(tag_dict)
         print("\n")
 
-#check if groups of tags are suceptible to cross talk / complexity issues
-def check_crosstalk_col(dataframe, colno): #checks a single col
-    cols = []
-    for i in range(len(dataframe)):
-       cols.append(dataframe[0][i][colno])
-    return(cols)
 
-def check_crosstalk(taglist):
-    df = pd.DataFrame(taglist)
-    nocols = len(taglist[0]) # assume all tags are same length
-    listcols = []
-    proportions = {}
-    
-    for i in range(nocols):
-        listcols.append(check_crosstalk_col(df, i))
+#Serialisation of database queries/cache stuff after here
+#Should be an hour (minutes)
+max_cache_age = 60 * 60
+cache_filename = 'cache.json'
+refresh = False
 
-    for i in range(len(listcols)):
-        proportions["Col {}".format(i)] = [0,0,0,0] # A,T,C,G
+try:
+    with open(cache_filename, 'r') as cache:
+        cached = json.load(cache)
 
-    for i in range(len(listcols)):
-        for j in range(len(listcols[i])): #asssuming again all tags are same length
-            if listcols[i][j] == "A":
-                proportions["Col {}".format(i)][0] += 1 
-            elif listcols[i][j] == "T":
-                proportions["Col {}".format(i)][1] += 1 
-            elif listcols[i][j] == "C":
-                proportions["Col {}".format(i)][2] += 1 
-            elif listcols[i][j] == "G":
-                proportions["Col {}".format(i)][3] += 1 
-            else:
-                pass
-    for col, lst in proportions.items():
-        print(" {} has {:.2f}% A, {:.2f}% T, {:.2f}% C, {:.2f}% G".format(col, 
-            ((lst[0]/sum(lst))*100), ((lst[1]/sum(lst))*100), ((lst[2]/sum(lst))*100),
-            ((lst[3]/sum(lst))*100) )) 
-    print("\n")
-    if args.verbose:
-        print(proportions) #numerical proportions
-    
+    if(time.time() > cached['timestamp'] + max_cache_age):
+        print("Cache bad. Reloading from database \n")
+        refresh = True
 
+except IOError:
+    print("Error opening {}: Reloading cache from database (does it exist?)".format(cache_filename))
+    refresh = True
 
-##########################
+if refresh:
+    #Cache old, rebuild:
+    cache_data = db_build_cache()
+    #Update cache file
+    data = {'tag_db': cache_data, 'timestamp': time.time()} #Record timestamp to cache dict
+    with open(cache_filename, 'w') as cache:
+        json.dump(data, cache)
+else:
+    #Use cache
+    cache_data = cached['tag_db']
+
 ##########################
 ######Parse Arguments#####
 ##########################
-##########################
-
 #File Mode
 if args.inputfile is not None:
     #do some stuff when an inputfile is passed
@@ -229,18 +280,18 @@ if args.manifest is not None:
 #check for complexity issues
         check_crosstalk(taglist)
     #manifests with two tag cols
-    else: 
+    else:
         taglist1 = []
         taglist2 = []
         long_tags = []
-        for i in range(len(manifest.loc[:,'tag1'])):
+        for i in range(len(manifest.loc[:, 'tag1'])):
             taglist1.append(manifest.loc[i]['tag1'])
 
-        for i in range(len(manifest.loc[:,'tag2'])):
+        for i in range(len(manifest.loc[:, 'tag2'])):
             taglist2.append(manifest.loc[i]['tag2'])
         manifest['long_tag'] = manifest['tag1'].map(str) + manifest['tag2']
 
-        for i in range(len(manifest.loc[:,'long_tag'])):
+        for i in range(len(manifest.loc[:, 'long_tag'])):
             long_tags.append(manifest.loc[i]['long_tag'])
 
         #check the passed tags are valid combinations of ATCG
@@ -271,5 +322,5 @@ if args.database is not None:
             db_check_list(taglist2)
             print("Occurences of compound tags in database: \n")
             db_check_list(long_tags)
-elif args.database==None and args.inputfile==None and args.manifest==None:
+elif args.database == None and args.inputfile == None and args.manifest == None:
     print("No arguments passed, try running with -h")
