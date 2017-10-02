@@ -133,12 +133,12 @@ def check_crosstalk(taglist):
 #Database functionality
 
 def db_build_cache():
-    tag_dict = {}
+    tag_dict = collections.defaultdict(list)
     tag_conn = mysql.connector.connect(user='warehouse_ro',
                                        host='seqw-db', database='sequencescape_warehouse', port=3379)
     tag_cursor = tag_conn.cursor()
     tag_query = ("""
-                SELECT DISTINCT expected_sequence 
+                SELECT expected_sequence, tag_group_internal_id, tag_group_name 
                 FROM tags 
                 WHERE tag_group_internal_id IS NOT NULL
                 AND expected_sequence IS NOT NULL
@@ -150,8 +150,8 @@ def db_build_cache():
     all_tags = [row[0] for row in rows]
     tag_cursor.close()
 
-    for tag in range(len(all_tags)):
-        tag_dict[all_tags[tag]] = db_check_tag(all_tags[tag], tag_conn)
+    for tag in range(len(rows)):
+        tag_dict[rows[tag][0]].append((rows[tag][1], rows[tag][2]))
 
     tag_conn.close() # (Don't forget to close the db connection)
     return tag_dict
@@ -169,7 +169,7 @@ def db_check_tag(tag, tag_conn):
     return rows
     tag_cursor.close()
 
-def db_check_list(a_list):
+def db_check_list(a_list): #needs work
     tag_dict = {}
     for tag in range(len(a_list)):
        tag_dict[a_list[tag]] = db_check_tag(a_list[tag]) ;
