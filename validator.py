@@ -134,7 +134,7 @@ def check_crosstalk(taglist):
 
 def db_build_cache():
     tag_dict = collections.defaultdict(list)
-    tag_conn = mysql.connector.connect(user='warehouse_ro',
+    tag_conn = mysql.connector.connect(user=args.database[0],
                                        host='seqw-db', database='sequencescape_warehouse', port=3379)
     tag_cursor = tag_conn.cursor()
     tag_query = ("""
@@ -158,16 +158,8 @@ def db_build_cache():
 
 #function to check if passed tags are in any of the tag groups
 #note that now the single tag check must have a db connection already open
-def db_check_tag(tag, tag_conn):
-    tag_cursor = tag_conn.cursor()
-    tag_query = ("""SELECT DISTINCT tag_group_internal_id,tag_group_name
-                    FROM tags WHERE expected_sequence = '{}'
-                    AND tag_group_internal_id IS NOT NULL
-                    AND is_current = True""".format(tag))
-    tag_cursor.execute(tag_query)
-    rows = tag_cursor.fetchall()
-    return rows
-    tag_cursor.close()
+def db_check_tag(tag):
+    return cache_data[tag]
 
 def db_check_list(a_list): #needs work
     tag_dict = {}
@@ -220,7 +212,7 @@ try:
         refresh = True
 
 except IOError:
-    print("Error opening {}: Reloading cache from database (does it exist?)".format(cache_filename))
+    print("Error opening {}: Reloading cache from database (Perhaps it does not exist?)".format(cache_filename))
     refresh = True
 
 if refresh:
@@ -229,7 +221,7 @@ if refresh:
     #Update cache file
     data = {'tag_db': cache_data, 'timestamp': time.time()} #Record timestamp to cache dict
     with open(cache_filename, 'w') as cache:
-        json.dump(data, cache)
+        json.dump(data, cache, indent = 4)
 else:
     #Use cache
     cache_data = cached['tag_db']
