@@ -176,6 +176,10 @@ def db_build_cache():
 
 def db_check_tag(tag):
     """check if passed tag is in any tag group"""
+    try:
+        cache_data[tag]
+    except KeyError:
+        return([])
     return cache_data[tag]
 
 def db_check_list(a_list):
