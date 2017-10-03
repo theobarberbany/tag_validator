@@ -9,6 +9,8 @@ import pprint
 import pandas as pd
 import time
 import json
+import timeit
+tic=timeit.default_timer()
 pp = pprint.PrettyPrinter(indent=4) #pretty printing lib for dictionaries
 ###############################
 ##Add Arguments to be parsed###
@@ -341,3 +343,5 @@ if args.database is not None:
             db_check_list(long_tags)
 elif args.database is None and args.inputfile is None and args.manifest is None:
     print("No arguments passed, try running with -h")
+toc=timeit.default_timer()
+print("Time to execute : {} \n".format(toc-tic))
