@@ -183,7 +183,14 @@ def db_check_list(a_list): #needs work
         values.append(value)
     #flatten list 
     flat_list = [item for sublist in values for item in sublist]
+    print(flat_list)
+    #JSON does not preserve tuples, turns them into lists instead. Undo this.
+    
+    if not refresh:
+        flat_list = [tuple(l) for l in flat_list]
+    
     distinct = list(set(flat_list))
+    print(distinct)
     for i in range(len(distinct)):
         print("{} {},  Matches : {}".format(distinct[i][0], distinct[i][1], flat_list.count(distinct[i])))
     print("\n")
