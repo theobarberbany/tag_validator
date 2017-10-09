@@ -10226,6 +10226,10 @@
             [
                 99,
                 "Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "CGTACTAGCTAAGCCT": [
@@ -10632,6 +10636,10 @@
             [
                 87,
                 "Nextera DUAL v3 - 96 tags - 16mer (ALTERNATIVE PLATE ARRAY) updated"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "GCTACGCTAGAGTAGA": [
@@ -11074,6 +11082,10 @@
             [
                 99,
                 "Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "GTAGAGGACTAAGCCT": [
@@ -11450,6 +11462,10 @@
             [
                 99,
                 "Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "TAAGGCGAGTAAGGAG": [
@@ -11724,6 +11740,10 @@
             [
                 99,
                 "Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "CGTACTAGTAGATCGC": [
@@ -11918,6 +11938,10 @@
             [
                 99,
                 "Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "CGAGGCTGCTAAGCCT": [
@@ -12238,6 +12262,10 @@
             [
                 99,
                 "Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "ATCCTA": [
@@ -12294,6 +12322,10 @@
             [
                 99,
                 "Illumina Nextera XT tags - 16mers - 384 plex ALTERNATIVE PLATE ARRAY"
+            ],
+            [
+                142,
+                "Magic Tag Group"
             ]
         ],
         "GGCACA": [
@@ -68761,7 +68793,31 @@
                 164,
                 "pWGS i7 UDI tag group"
             ]
+        ],
+        "GGAATCTC": [
+            [
+                142,
+                "Magic Tag Group"
+            ]
+        ],
+        "AATGAGCG": [
+            [
+                142,
+                "Magic Tag Group"
+            ]
+        ],
+        "TCTCCGGA": [
+            [
+                142,
+                "Magic Tag Group"
+            ]
+        ],
+        "TTCTGAAT": [
+            [
+                142,
+                "Magic Tag Group"
+            ]
         ]
     },
-    "timestamp": 1506961044.084081
+    "timestamp": 1507544389.433666
 }

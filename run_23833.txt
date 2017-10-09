@@ -1,0 +1,65 @@
+Composition for Tag 1 : 
+
+ Col 0 has 3.12% A, 61.46% T, 3.12% C, 32.29% G
+ Col 1 has 27.08% A, 22.92% T, 26.04% C, 23.96% G
+ Col 2 has 26.04% A, 26.04% T, 26.04% C, 21.88% G
+ Col 3 has 25.00% A, 26.04% T, 23.96% C, 25.00% G
+ Col 4 has 19.79% A, 31.25% T, 22.92% C, 26.04% G
+ Col 5 has 20.83% A, 27.08% T, 26.04% C, 26.04% G
+ Col 6 has 16.67% A, 33.33% T, 22.92% C, 27.08% G
+ Col 7 has 9.38% A, 40.62% T, 19.79% C, 30.21% G
+
+
+Composition for Tag 2 : 
+
+ Col 0 has 33.33% A, 33.33% T, 33.33% C, 0.00% G
+ Col 1 has 33.33% A, 33.33% T, 33.33% C, 0.00% G
+ Col 2 has 33.33% A, 66.67% T, 0.00% C, 0.00% G
+ Col 3 has 66.67% A, 0.00% T, 0.00% C, 33.33% G
+ Col 4 has 33.33% A, 33.33% T, 0.00% C, 33.33% G
+ Col 5 has 0.00% A, 0.00% T, 66.67% C, 33.33% G
+ Col 6 has 0.00% A, 0.00% T, 66.67% C, 33.33% G
+ Col 7 has 0.00% A, 66.67% T, 33.33% C, 0.00% G
+
+
+Occurences of tag1 in database: 
+
+43 MEK study tags only,  Matches : 4
+63 NextTruRNATest,  Matches : 9
+60 Nextflex96_8mers,  Matches : 95
+117 Chromium Genome 96,  Matches : 1
+13 Back-filled Illumina multiplexing  - various 4 to 12 mer tags,  Matches : 1
+15 Pulldown tag 1 and 2 - 8 mer tags,  Matches : 2
+21 Pulldown 12 tag set - 8 mer tags,  Matches : 12
+5 RInV Transposon indexing primers - 8 mer tags,  Matches : 96
+105 Meyer Kircher Custom 8bp Barcodes,  Matches : 1
+136 Nextera i7 tags for 1536 new,  Matches : 1
+103 calculus_tag_group_46 - 67 tags,  Matches : 1
+32 TKO methylome - 8 mer tags,  Matches : 2
+153 PF_adapters_UDI_96_A_i5,  Matches : 1
+129 Nextera i7 tags for 1536,  Matches : 1
+73 Moleculo384,  Matches : 3
+47 SureSelect RNA-Seq 48 tags set - 8 mer tags,  Matches : 1
+156 PF_adapters_UDI_96_C_i7,  Matches : 1
+6 Sanger_168tags - 10 mer tags,  Matches : 96
+109 Tag set for run 18619,  Matches : 6
+92 NEXTflex-96 barcoded adapters,  Matches : 1
+34 Tra vs Spl adap comp tags,  Matches : 4
+128 i7 Nextera Test Tags,  Matches : 7
+19 Pulldown 8 tag set - 8 mer tags,  Matches : 8
+142 Magic Tag Group,  Matches : 96
+
+
+Occurences of tag2 in database: 
+
+142 Magic Tag Group,  Matches : 3
+93 Dual Index Tag2 sequences,  Matches : 3
+
+
+Occurences of compound tags in database: 
+
+113 i5 QA assay tag set,  Matches : 12
+62 dual_index_D501/502 16 mers,  Matches : 96
+62 dual_index_D501/502,  Matches : 192
+
+
