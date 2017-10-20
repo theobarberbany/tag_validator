@@ -152,8 +152,8 @@ def db_build_cache():
     #connect to db and fetch data
     tag_dict = collections.defaultdict(list)
     tag_conn = mysql.connector.connect(user=args.database[0],
-                                       host='seqw-db', database='sequencescape_warehouse',
-                                       port=3379)
+                                       host='<Your host here>', database='<Database name>',
+                                       port=<Your Port here>)
     tag_cursor = tag_conn.cursor()
     tag_query = ("""
                 SELECT expected_sequence, tag_group_internal_id, tag_group_name 
