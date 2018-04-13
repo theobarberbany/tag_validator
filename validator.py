@@ -26,6 +26,8 @@ parser.add_argument("-m", "--manifest", type=str, nargs=1,
                     help="supply a manifest to check")
 parser.add_argument("-v", "--verbose", action="store_true",
                     help="Increace output verbosity")
+parser.add_argument("-c", "--cache", action="store_true",
+                    help="Output cache to stdout.")
 
 args = parser.parse_args()
 
@@ -153,7 +155,7 @@ def db_build_cache():
     tag_dict = collections.defaultdict(list)
     tag_conn = mysql.connector.connect(user=args.database[0],
                                        host='<Your host here>', database='<Database name>',
-                                       port=<Your Port here>)
+                                       port=<Your port here>)
     tag_cursor = tag_conn.cursor()
     tag_query = ("""
                 SELECT expected_sequence, tag_group_internal_id, tag_group_name 
@@ -225,39 +227,43 @@ def db_check_list(a_list):
         print("\n")
 
 
+##########################
+######Parse Arguments#####
+##########################
 #Serialisation of database queries/cache stuff after here
 #Should be an hour (minutes)
 max_cache_age = 60 * 60
 cache_filename = 'cache.json'
 refresh = False
+if args.cache:
+    print(json.dumps({'tag_db': db_build_cache(), 'timestamp': time.time()}))
 
-try:
-    with open(cache_filename, 'r') as cache:
-        cached = json.load(cache)
+else:
+    try:
+        with open(cache_filename, 'r') as cache:
+            cached = json.load(cache)
 
-    if time.time() > cached['timestamp'] + max_cache_age:
-        print("Cache bad. Reloading from database \n")
+        if time.time() > cached['timestamp'] + max_cache_age:
+            print("Cache bad. Reloading from database \n")
+            refresh = True
+
+    except IOError:
+        print("Error opening {}: Reloading cache from database (Perhaps it does not exist?)"
+              .format(cache_filename))
         refresh = True
 
-except IOError:
-    print("Error opening {}: Reloading cache from database (Perhaps it does not exist?)"
-          .format(cache_filename))
-    refresh = True
+    if refresh:
+        #Cache old, rebuild:
+        cache_data = db_build_cache()
+        #Update cache file
+        data = {'tag_db': cache_data, 'timestamp': time.time()} #Record timestamp to cache dict
+        with open(cache_filename, 'w') as cache:
+            json.dump(data, cache, indent=4)
+    else:
+        #Use cache
+        cache_data = cached['tag_db']
 
-if refresh:
-    #Cache old, rebuild:
-    cache_data = db_build_cache()
-    #Update cache file
-    data = {'tag_db': cache_data, 'timestamp': time.time()} #Record timestamp to cache dict
-    with open(cache_filename, 'w') as cache:
-        json.dump(data, cache, indent=4)
-else:
-    #Use cache
-    cache_data = cached['tag_db']
 
-##########################
-######Parse Arguments#####
-##########################
 #File Mode
 if args.inputfile is not None:
     #do some stuff when an inputfile is passed
@@ -344,4 +350,5 @@ if args.database is not None:
 elif args.database is None and args.inputfile is None and args.manifest is None:
     print("No arguments passed, try running with -h")
 toc=timeit.default_timer()
-print("Time to execute : {} \n".format(toc-tic))
+if not args.cache:
+    print("Time to execute : {} \n".format(toc-tic))
