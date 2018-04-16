@@ -31,4 +31,4 @@ override db_port DBPORT
 override db_name DBNAME
 override db_host DBHOST
 
-tail -f /dev/null
+/bin/sh -c tail -f /dev/null
