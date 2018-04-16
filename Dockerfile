@@ -6,6 +6,9 @@ RUN apt-get update
 RUN apt-get install -y jq \
         curl
 
-COPY . .
+COPY . ./
+RUN echo -e '#!/bin/bash' > /usr/bin/validator
+RUN echo -e 'python /validator.py "$@"' >> /usr/bin/validator && \
+    chmod +x /usr/bin/validator
 
 ENTRYPOINT ["/entrypoint.sh"]
